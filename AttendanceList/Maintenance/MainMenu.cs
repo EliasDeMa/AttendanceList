@@ -11,9 +11,9 @@ using DatabaseModel;
 
 namespace Maintenance
 {
-    public partial class Form1 : Form
+    public partial class MainMenu : Form
     {
-        public Form1()
+        public MainMenu()
         {
             InitializeComponent();
         }
@@ -28,6 +28,14 @@ namespace Maintenance
                     coursesListBox.Items.Add(item);
                 }
             }
+        }
+
+        private void courseInfoButton_Click(object sender, EventArgs e)
+        {
+            var currentSelectedCourse = ((CourseInfo)coursesListBox.SelectedItem).Id;
+
+            var courseInfoForm = new CourseInfoForm(currentSelectedCourse);
+            courseInfoForm.Show();
         }
     }
 }

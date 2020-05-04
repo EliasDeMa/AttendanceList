@@ -1,6 +1,6 @@
 ﻿namespace Maintenance
 {
-    partial class Form1
+    partial class MainMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -30,6 +30,7 @@
         {
             this.coursesListBox = new System.Windows.Forms.ListBox();
             this.courseTitlesLabel = new System.Windows.Forms.Label();
+            this.courseInfoButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // coursesListBox
@@ -52,11 +53,22 @@
             this.courseTitlesLabel.TabIndex = 2;
             this.courseTitlesLabel.Text = "Courses:";
             // 
+            // courseInfoButton
+            // 
+            this.courseInfoButton.Location = new System.Drawing.Point(382, 42);
+            this.courseInfoButton.Name = "courseInfoButton";
+            this.courseInfoButton.Size = new System.Drawing.Size(195, 47);
+            this.courseInfoButton.TabIndex = 3;
+            this.courseInfoButton.Text = "Course info";
+            this.courseInfoButton.UseVisualStyleBackColor = true;
+            this.courseInfoButton.Click += new System.EventHandler(this.courseInfoButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.courseInfoButton);
             this.Controls.Add(this.courseTitlesLabel);
             this.Controls.Add(this.coursesListBox);
             this.Name = "Form1";
@@ -71,6 +83,7 @@
 
         private System.Windows.Forms.ListBox coursesListBox;
         private System.Windows.Forms.Label courseTitlesLabel;
+        private System.Windows.Forms.Button courseInfoButton;
     }
 }
 
