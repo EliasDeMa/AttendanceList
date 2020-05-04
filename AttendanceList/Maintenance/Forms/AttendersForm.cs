@@ -37,7 +37,10 @@ namespace Maintenance
 
         private void addAttenderButton_Click(object sender, EventArgs e)
         {
+            using (var addAttender = new AddAttenderForm())
+            {
 
+            }
         }
     }
 }

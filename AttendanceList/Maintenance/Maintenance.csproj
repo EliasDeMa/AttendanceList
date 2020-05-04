@@ -56,49 +56,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddAttenderForm.cs">
+    <Compile Include="Forms\AddAttenderForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddAttenderForm.Designer.cs">
+    <Compile Include="Forms\AddAttenderForm.Designer.cs">
       <DependentUpon>AddAttenderForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AttendersForm.cs">
+    <Compile Include="Forms\AttendersForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AttendersForm.Designer.cs">
+    <Compile Include="Forms\AttendersForm.Designer.cs">
       <DependentUpon>AttendersForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CourseInfoForm.cs">
+    <Compile Include="Forms\CourseInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CourseInfoForm.Designer.cs">
+    <Compile Include="Forms\CourseInfoForm.Designer.cs">
       <DependentUpon>CourseInfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditFieldForm.cs">
+    <Compile Include="Forms\EditFieldForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditFieldForm.Designer.cs">
+    <Compile Include="Forms\EditFieldForm.Designer.cs">
       <DependentUpon>EditFieldForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IReturn.cs" />
-    <Compile Include="MainMenu.cs">
+    <Compile Include="Forms\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenu.Designer.cs">
+    <Compile Include="Forms\MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AttendersForm.resx">
+    <EmbeddedResource Include="Forms\AttendersForm.resx">
       <DependentUpon>AttendersForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CourseInfoForm.resx">
+    <EmbeddedResource Include="Forms\CourseInfoForm.resx">
       <DependentUpon>CourseInfoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditFieldForm.resx">
+    <EmbeddedResource Include="Forms\EditFieldForm.resx">
       <DependentUpon>EditFieldForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenu.resx">
+    <EmbeddedResource Include="Forms\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
