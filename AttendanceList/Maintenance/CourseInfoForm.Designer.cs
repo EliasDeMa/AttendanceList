@@ -44,6 +44,7 @@
             this.courseCodeTextBox = new System.Windows.Forms.TextBox();
             this.editTrainingInstButton = new System.Windows.Forms.Button();
             this.courseEditButton = new System.Windows.Forms.Button();
+            this.contactEditButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // trainingInstitutionLabel
@@ -206,11 +207,22 @@
             this.courseEditButton.UseVisualStyleBackColor = true;
             this.courseEditButton.Click += new System.EventHandler(this.courseEditButton_Click);
             // 
+            // contactEditButton
+            // 
+            this.contactEditButton.Location = new System.Drawing.Point(531, 89);
+            this.contactEditButton.Name = "contactEditButton";
+            this.contactEditButton.Size = new System.Drawing.Size(75, 23);
+            this.contactEditButton.TabIndex = 16;
+            this.contactEditButton.Text = "Edit";
+            this.contactEditButton.UseVisualStyleBackColor = true;
+            this.contactEditButton.Click += new System.EventHandler(this.contactEditButton_Click);
+            // 
             // CourseInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(618, 266);
+            this.Controls.Add(this.contactEditButton);
             this.Controls.Add(this.courseEditButton);
             this.Controls.Add(this.editTrainingInstButton);
             this.Controls.Add(this.courseCodeTextBox);
@@ -254,5 +266,6 @@
         private System.Windows.Forms.TextBox courseCodeTextBox;
         private System.Windows.Forms.Button editTrainingInstButton;
         private System.Windows.Forms.Button courseEditButton;
+        private System.Windows.Forms.Button contactEditButton;
     }
 }

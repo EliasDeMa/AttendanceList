@@ -32,10 +32,19 @@ namespace Maintenance
 
         private void courseInfoButton_Click(object sender, EventArgs e)
         {
-            var currentSelectedCourse = ((CourseInfo)coursesListBox.SelectedItem).Id;
+            if (coursesListBox.SelectedIndex == -1)
+            {
+                mainErrorProvider.SetError(courseInfoButton, "Must have item selected before clicking button");
+            }
+            else
+            {
+                mainErrorProvider.Clear();
+                var currentSelectedCourse = ((CourseInfo)coursesListBox.SelectedItem).Id;
+                var courseInfoForm = new CourseInfoForm(currentSelectedCourse);
 
-            var courseInfoForm = new CourseInfoForm(currentSelectedCourse);
-            courseInfoForm.Show();
+                courseInfoForm.Show();
+            }
+
         }
     }
 }

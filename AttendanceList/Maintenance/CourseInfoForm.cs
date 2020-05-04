@@ -68,6 +68,20 @@ namespace Maintenance
             }
         }
 
+        private void contactEditButton_Click(object sender, EventArgs e)
+        {
+            using (var dialog = new EditFieldForm(contactTextBox.Text))
+            {
+                var result = dialog.ShowDialog();
+                if (result == DialogResult.OK && _course.ContactPerson != dialog.Result)
+                {
+                    contactTextBox.Text = dialog.Result;
+                    _course.ContactPerson = dialog.Result;
+                    changed = true;
+                }
+            }
+        }
+
         #endregion
 
         private void CourseInfoForm_FormClosing(object sender, FormClosingEventArgs e)

@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.coursesListBox = new System.Windows.Forms.ListBox();
             this.courseTitlesLabel = new System.Windows.Forms.Label();
             this.courseInfoButton = new System.Windows.Forms.Button();
+            this.mainErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.mainErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // coursesListBox
@@ -63,7 +66,12 @@
             this.courseInfoButton.UseVisualStyleBackColor = true;
             this.courseInfoButton.Click += new System.EventHandler(this.courseInfoButton_Click);
             // 
-            // Form1
+            // mainErrorProvider
+            // 
+            this.mainErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.mainErrorProvider.ContainerControl = this;
+            // 
+            // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -71,9 +79,10 @@
             this.Controls.Add(this.courseInfoButton);
             this.Controls.Add(this.courseTitlesLabel);
             this.Controls.Add(this.coursesListBox);
-            this.Name = "Form1";
+            this.Name = "MainMenu";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.mainErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,6 +93,7 @@
         private System.Windows.Forms.ListBox coursesListBox;
         private System.Windows.Forms.Label courseTitlesLabel;
         private System.Windows.Forms.Button courseInfoButton;
+        private System.Windows.Forms.ErrorProvider mainErrorProvider;
     }
 }
 
