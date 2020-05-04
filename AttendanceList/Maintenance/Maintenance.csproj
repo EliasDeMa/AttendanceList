@@ -62,6 +62,13 @@
     <Compile Include="CourseInfoForm.Designer.cs">
       <DependentUpon>CourseInfoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditFieldForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditFieldForm.Designer.cs">
+      <DependentUpon>EditFieldForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IReturn.cs" />
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +79,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CourseInfoForm.resx">
       <DependentUpon>CourseInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditFieldForm.resx">
+      <DependentUpon>EditFieldForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>

@@ -13,11 +13,14 @@ namespace Maintenance
 {
     public partial class CourseInfoForm : Form
     {
-        private CourseInfo _course;
+        private readonly CourseInfo _course;
+        private readonly int _id;
+        private bool changed;
 
         public CourseInfoForm(int id)
         {
             InitializeComponent();
+            this._id = id;
             using (var context = new AttendanceListContext())
             {
                 _course = context.CourseInfoes.First(x => x.Id == id);
@@ -33,6 +36,45 @@ namespace Maintenance
             refAddressTextBox.Text = _course.ReferenceAddress;
             oeNumberTextBox.Text = _course.OeNumber.ToString();
             courseCodeTextBox.Text = _course.CourseCode.ToString();
+        }
+
+        private void editTrainingInstButton_Click(object sender, EventArgs e)
+        {
+            using (var dialog = new EditFieldForm(trainingInstitutionTextBox.Text))
+            {
+                var result = dialog.ShowDialog();
+                if (result == DialogResult.OK && _course.TrainingInstitution != dialog.Result)
+                {
+                    trainingInstitutionTextBox.Text = dialog.Result;
+                    _course.TrainingInstitution = dialog.Result;
+                    changed = true;
+                }
+            }
+        }
+
+        private void CourseInfoForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (changed)
+            {
+                var result = MessageBox.Show("Do you want to save changes", 
+                                             "Save", 
+                                             MessageBoxButtons.YesNoCancel);
+
+                if (result == DialogResult.Yes)
+                {
+                    using (var context = new AttendanceListContext())
+                    {
+                        var info = context.CourseInfoes.First(x => x.Id == _id);
+
+                        context.Entry(info).CurrentValues.SetValues(_course);
+                        context.SaveChanges();
+                    }
+                }
+                else if (result == DialogResult.Cancel)
+                {
+                    e.Cancel = true;
+                }
+            }
         }
     }
 }

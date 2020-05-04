@@ -42,6 +42,7 @@
             this.refAddressTextBox = new System.Windows.Forms.TextBox();
             this.oeNumberTextBox = new System.Windows.Forms.TextBox();
             this.courseCodeTextBox = new System.Windows.Forms.TextBox();
+            this.editTrainingInstButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // trainingInstitutionLabel
@@ -57,9 +58,10 @@
             // trainingInstitutionTextBox
             // 
             this.trainingInstitutionTextBox.Enabled = false;
+            this.trainingInstitutionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.trainingInstitutionTextBox.Location = new System.Drawing.Point(216, 17);
             this.trainingInstitutionTextBox.Name = "trainingInstitutionTextBox";
-            this.trainingInstitutionTextBox.Size = new System.Drawing.Size(295, 20);
+            this.trainingInstitutionTextBox.Size = new System.Drawing.Size(295, 23);
             this.trainingInstitutionTextBox.TabIndex = 1;
             this.trainingInstitutionTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -126,62 +128,79 @@
             // courseTextBox
             // 
             this.courseTextBox.Enabled = false;
+            this.courseTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.courseTextBox.Location = new System.Drawing.Point(216, 52);
             this.courseTextBox.Name = "courseTextBox";
-            this.courseTextBox.Size = new System.Drawing.Size(295, 20);
+            this.courseTextBox.Size = new System.Drawing.Size(295, 23);
             this.courseTextBox.TabIndex = 8;
             this.courseTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // contactTextBox
             // 
             this.contactTextBox.Enabled = false;
+            this.contactTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contactTextBox.Location = new System.Drawing.Point(216, 89);
             this.contactTextBox.Name = "contactTextBox";
-            this.contactTextBox.Size = new System.Drawing.Size(295, 20);
+            this.contactTextBox.Size = new System.Drawing.Size(295, 23);
             this.contactTextBox.TabIndex = 9;
             this.contactTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // addressTextBox
             // 
             this.addressTextBox.Enabled = false;
+            this.addressTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addressTextBox.Location = new System.Drawing.Point(216, 123);
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(295, 20);
+            this.addressTextBox.Size = new System.Drawing.Size(295, 23);
             this.addressTextBox.TabIndex = 10;
             this.addressTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // refAddressTextBox
             // 
             this.refAddressTextBox.Enabled = false;
+            this.refAddressTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refAddressTextBox.Location = new System.Drawing.Point(216, 157);
             this.refAddressTextBox.Name = "refAddressTextBox";
-            this.refAddressTextBox.Size = new System.Drawing.Size(295, 20);
+            this.refAddressTextBox.Size = new System.Drawing.Size(295, 23);
             this.refAddressTextBox.TabIndex = 11;
             this.refAddressTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // oeNumberTextBox
             // 
             this.oeNumberTextBox.Enabled = false;
+            this.oeNumberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.oeNumberTextBox.Location = new System.Drawing.Point(216, 189);
             this.oeNumberTextBox.Name = "oeNumberTextBox";
-            this.oeNumberTextBox.Size = new System.Drawing.Size(295, 20);
+            this.oeNumberTextBox.Size = new System.Drawing.Size(295, 23);
             this.oeNumberTextBox.TabIndex = 12;
             this.oeNumberTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // courseCodeTextBox
             // 
             this.courseCodeTextBox.Enabled = false;
+            this.courseCodeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.courseCodeTextBox.Location = new System.Drawing.Point(216, 225);
             this.courseCodeTextBox.Name = "courseCodeTextBox";
-            this.courseCodeTextBox.Size = new System.Drawing.Size(295, 20);
+            this.courseCodeTextBox.Size = new System.Drawing.Size(295, 23);
             this.courseCodeTextBox.TabIndex = 13;
             this.courseCodeTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // editTrainingInstButton
+            // 
+            this.editTrainingInstButton.Location = new System.Drawing.Point(531, 17);
+            this.editTrainingInstButton.Name = "editTrainingInstButton";
+            this.editTrainingInstButton.Size = new System.Drawing.Size(75, 23);
+            this.editTrainingInstButton.TabIndex = 14;
+            this.editTrainingInstButton.Text = "Edit";
+            this.editTrainingInstButton.UseVisualStyleBackColor = true;
+            this.editTrainingInstButton.Click += new System.EventHandler(this.editTrainingInstButton_Click);
             // 
             // CourseInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 374);
+            this.ClientSize = new System.Drawing.Size(618, 266);
+            this.Controls.Add(this.editTrainingInstButton);
             this.Controls.Add(this.courseCodeTextBox);
             this.Controls.Add(this.oeNumberTextBox);
             this.Controls.Add(this.refAddressTextBox);
@@ -198,6 +217,7 @@
             this.Controls.Add(this.trainingInstitutionLabel);
             this.Name = "CourseInfoForm";
             this.Text = "CourseInfoForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CourseInfoForm_FormClosing);
             this.Load += new System.EventHandler(this.CourseInfoForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -220,5 +240,6 @@
         private System.Windows.Forms.TextBox refAddressTextBox;
         private System.Windows.Forms.TextBox oeNumberTextBox;
         private System.Windows.Forms.TextBox courseCodeTextBox;
+        private System.Windows.Forms.Button editTrainingInstButton;
     }
 }
