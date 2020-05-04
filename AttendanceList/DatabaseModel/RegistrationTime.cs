@@ -6,7 +6,7 @@ namespace DatabaseModel
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("RegistrationTime")]
+    //[Table("RegistrationTime")]
     public partial class RegistrationTime
     {
         public int Id { get; set; }

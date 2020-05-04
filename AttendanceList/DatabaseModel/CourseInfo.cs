@@ -6,7 +6,7 @@ namespace DatabaseModel
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("CourseInfo")]
+    [Table("CourseInfos")]
     public partial class CourseInfo
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]

@@ -82,6 +82,82 @@ namespace Maintenance
             }
         }
 
+        private void addressEditButton_Click(object sender, EventArgs e)
+        {
+            using (var dialog = new EditFieldForm(addressTextBox.Text))
+            {
+                var result = dialog.ShowDialog();
+                if (result == DialogResult.OK && _course.Address != dialog.Result)
+                {
+                    addressTextBox.Text = dialog.Result;
+                    _course.Address = dialog.Result;
+                    changed = true;
+                }
+            }
+        }
+
+        private void refAddressEditButton_Click(object sender, EventArgs e)
+        {
+            using (var dialog = new EditFieldForm(refAddressTextBox.Text))
+            {
+                var result = dialog.ShowDialog();
+                if (result == DialogResult.OK && _course.ReferenceAddress != dialog.Result)
+                {
+                    refAddressTextBox.Text = dialog.Result;
+                    _course.ReferenceAddress = dialog.Result;
+                    changed = true;
+                }
+            }
+        }
+
+        private void oeNumberEditButton_Click(object sender, EventArgs e)
+        {
+            using (var dialog = new EditFieldForm(oeNumberTextBox.Text))
+            {
+                var result = dialog.ShowDialog();
+
+                
+                if (result == DialogResult.OK && dialog.Result != oeNumberTextBox.Text)
+                {
+                    if (Int32.TryParse(dialog.Result, out int oeNumber))
+                    {
+                        oeNumberTextBox.Text = dialog.Result;
+                        _course.OeNumber = oeNumber;
+                        changed = true;
+                        editFormErrorProvider.SetError(oeNumberEditButton, "");
+                    }
+                    else
+                    {
+                        editFormErrorProvider.SetError(oeNumberEditButton, "Entry in field must be an integer");
+                    }
+                }
+            }
+        }
+
+        private void courseCodeEditButton_Click(object sender, EventArgs e)
+        {
+            using (var dialog = new EditFieldForm(courseCodeTextBox.Text))
+            {
+                var result = dialog.ShowDialog();
+
+
+                if (result == DialogResult.OK && dialog.Result != courseCodeTextBox.Text)
+                {
+                    if (Int32.TryParse(dialog.Result, out int ccNumber))
+                    {
+                        courseCodeTextBox.Text = dialog.Result;
+                        _course.CourseCode = ccNumber;
+                        changed = true;
+                        editFormErrorProvider.SetError(courseCodeEditButton, "");
+                    }
+                    else
+                    {
+                        editFormErrorProvider.SetError(courseCodeEditButton, "Entry in field must be an integer");
+                    }
+                }
+            }
+        }
+
         #endregion
 
         private void CourseInfoForm_FormClosing(object sender, FormClosingEventArgs e)

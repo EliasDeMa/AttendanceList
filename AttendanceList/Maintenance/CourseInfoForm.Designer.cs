@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.trainingInstitutionLabel = new System.Windows.Forms.Label();
             this.trainingInstitutionTextBox = new System.Windows.Forms.TextBox();
             this.courseLabel = new System.Windows.Forms.Label();
@@ -45,6 +46,12 @@
             this.editTrainingInstButton = new System.Windows.Forms.Button();
             this.courseEditButton = new System.Windows.Forms.Button();
             this.contactEditButton = new System.Windows.Forms.Button();
+            this.addressEditButton = new System.Windows.Forms.Button();
+            this.refAddressEditButton = new System.Windows.Forms.Button();
+            this.oeNumberEditButton = new System.Windows.Forms.Button();
+            this.editFormErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.courseCodeEditButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.editFormErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // trainingInstitutionLabel
@@ -217,11 +224,60 @@
             this.contactEditButton.UseVisualStyleBackColor = true;
             this.contactEditButton.Click += new System.EventHandler(this.contactEditButton_Click);
             // 
+            // addressEditButton
+            // 
+            this.addressEditButton.Location = new System.Drawing.Point(531, 123);
+            this.addressEditButton.Name = "addressEditButton";
+            this.addressEditButton.Size = new System.Drawing.Size(75, 23);
+            this.addressEditButton.TabIndex = 17;
+            this.addressEditButton.Text = "Edit";
+            this.addressEditButton.UseVisualStyleBackColor = true;
+            this.addressEditButton.Click += new System.EventHandler(this.addressEditButton_Click);
+            // 
+            // refAddressEditButton
+            // 
+            this.refAddressEditButton.Location = new System.Drawing.Point(531, 157);
+            this.refAddressEditButton.Name = "refAddressEditButton";
+            this.refAddressEditButton.Size = new System.Drawing.Size(75, 23);
+            this.refAddressEditButton.TabIndex = 18;
+            this.refAddressEditButton.Text = "Edit";
+            this.refAddressEditButton.UseVisualStyleBackColor = true;
+            this.refAddressEditButton.Click += new System.EventHandler(this.refAddressEditButton_Click);
+            // 
+            // oeNumberEditButton
+            // 
+            this.oeNumberEditButton.Location = new System.Drawing.Point(531, 189);
+            this.oeNumberEditButton.Name = "oeNumberEditButton";
+            this.oeNumberEditButton.Size = new System.Drawing.Size(75, 23);
+            this.oeNumberEditButton.TabIndex = 19;
+            this.oeNumberEditButton.Text = "Edit";
+            this.oeNumberEditButton.UseVisualStyleBackColor = true;
+            this.oeNumberEditButton.Click += new System.EventHandler(this.oeNumberEditButton_Click);
+            // 
+            // editFormErrorProvider
+            // 
+            this.editFormErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.editFormErrorProvider.ContainerControl = this;
+            // 
+            // courseCodeEditButton
+            // 
+            this.courseCodeEditButton.Location = new System.Drawing.Point(531, 224);
+            this.courseCodeEditButton.Name = "courseCodeEditButton";
+            this.courseCodeEditButton.Size = new System.Drawing.Size(75, 23);
+            this.courseCodeEditButton.TabIndex = 20;
+            this.courseCodeEditButton.Text = "Edit";
+            this.courseCodeEditButton.UseVisualStyleBackColor = true;
+            this.courseCodeEditButton.Click += new System.EventHandler(this.courseCodeEditButton_Click);
+            // 
             // CourseInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 266);
+            this.ClientSize = new System.Drawing.Size(631, 266);
+            this.Controls.Add(this.courseCodeEditButton);
+            this.Controls.Add(this.oeNumberEditButton);
+            this.Controls.Add(this.refAddressEditButton);
+            this.Controls.Add(this.addressEditButton);
             this.Controls.Add(this.contactEditButton);
             this.Controls.Add(this.courseEditButton);
             this.Controls.Add(this.editTrainingInstButton);
@@ -243,6 +299,7 @@
             this.Text = "CourseInfoForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CourseInfoForm_FormClosing);
             this.Load += new System.EventHandler(this.CourseInfoForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.editFormErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,5 +324,10 @@
         private System.Windows.Forms.Button editTrainingInstButton;
         private System.Windows.Forms.Button courseEditButton;
         private System.Windows.Forms.Button contactEditButton;
+        private System.Windows.Forms.Button addressEditButton;
+        private System.Windows.Forms.Button refAddressEditButton;
+        private System.Windows.Forms.Button oeNumberEditButton;
+        private System.Windows.Forms.ErrorProvider editFormErrorProvider;
+        private System.Windows.Forms.Button courseCodeEditButton;
     }
 }
