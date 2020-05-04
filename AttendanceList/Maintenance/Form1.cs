@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DatabaseModel;
 
 namespace Maintenance
 {
@@ -15,6 +16,18 @@ namespace Maintenance
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            using (var context = new AttendanceListContext())
+            {
+                var courseInfo = context.CourseInfoes;
+                foreach (var item in courseInfo)
+                {
+                    coursesListBox.Items.Add(item);
+                }
+            }
         }
     }
 }
