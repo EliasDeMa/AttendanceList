@@ -89,6 +89,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AddAttenderForm.resx">
+      <DependentUpon>AddAttenderForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AttendersForm.resx">
       <DependentUpon>AttendersForm.cs</DependentUpon>
     </EmbeddedResource>

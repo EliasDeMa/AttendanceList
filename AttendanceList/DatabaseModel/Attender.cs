@@ -16,7 +16,7 @@ namespace DatabaseModel
             RegistrationTimes = new HashSet<RegistrationTime>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         public string Name { get; set; }
@@ -26,7 +26,7 @@ namespace DatabaseModel
         [Column(TypeName = "smalldatetime")]
         public DateTime? Birthdate { get; set; }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int BadgeNumber { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -21,5 +21,27 @@ namespace Maintenance
         }
 
         public Attender Result => attender;
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            if (nameTextBox.Text.Length > 0)
+                attender.Name = nameTextBox.Text;
+
+            if (AddressTextBox.Text.Length > 0)
+                attender.Address = AddressTextBox.Text;
+
+            if (birthdateTextBox.Text.Length > 0)
+                attender.Birthdate = DateTime.Parse(birthdateTextBox.Text);
+
+            if (attender == default)
+            {
+                addAttenderErrorProvider.SetError(addButton, "At least one field must be filled in");
+            }
+            else
+            {
+                this.DialogResult = DialogResult.OK;
+                Close();
+            }
+        }
     }
 }
