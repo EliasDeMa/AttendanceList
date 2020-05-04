@@ -33,6 +33,7 @@
             this.courseTitlesLabel = new System.Windows.Forms.Label();
             this.courseInfoButton = new System.Windows.Forms.Button();
             this.mainErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.attendersButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.mainErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,11 +72,22 @@
             this.mainErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.mainErrorProvider.ContainerControl = this;
             // 
+            // attendersButton
+            // 
+            this.attendersButton.Location = new System.Drawing.Point(382, 95);
+            this.attendersButton.Name = "attendersButton";
+            this.attendersButton.Size = new System.Drawing.Size(195, 47);
+            this.attendersButton.TabIndex = 4;
+            this.attendersButton.Text = "Attenders";
+            this.attendersButton.UseVisualStyleBackColor = true;
+            this.attendersButton.Click += new System.EventHandler(this.attendersButton_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.attendersButton);
             this.Controls.Add(this.courseInfoButton);
             this.Controls.Add(this.courseTitlesLabel);
             this.Controls.Add(this.coursesListBox);
@@ -94,6 +106,7 @@
         private System.Windows.Forms.Label courseTitlesLabel;
         private System.Windows.Forms.Button courseInfoButton;
         private System.Windows.Forms.ErrorProvider mainErrorProvider;
+        private System.Windows.Forms.Button attendersButton;
     }
 }
 

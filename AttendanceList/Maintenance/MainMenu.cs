@@ -38,13 +38,29 @@ namespace Maintenance
             }
             else
             {
-                mainErrorProvider.Clear();
+                mainErrorProvider.SetError(attendersButton, "");
                 var currentSelectedCourse = ((CourseInfo)coursesListBox.SelectedItem).Id;
                 var courseInfoForm = new CourseInfoForm(currentSelectedCourse);
 
                 courseInfoForm.Show();
             }
 
+        }
+
+        private void attendersButton_Click(object sender, EventArgs e)
+        {
+            if (coursesListBox.SelectedIndex == -1)
+            {
+                mainErrorProvider.SetError(attendersButton, "Must have item selected before clicking button");
+            }
+            else
+            {
+                mainErrorProvider.SetError(attendersButton, "");
+                var currentSelectedCourse = ((CourseInfo)coursesListBox.SelectedItem).Id;
+                var courseInfoForm = new AttendersForm(currentSelectedCourse);
+
+                courseInfoForm.Show();
+            }
         }
     }
 }

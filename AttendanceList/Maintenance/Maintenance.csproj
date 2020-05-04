@@ -56,6 +56,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddAttenderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAttenderForm.Designer.cs">
+      <DependentUpon>AddAttenderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttendersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendersForm.Designer.cs">
+      <DependentUpon>AttendersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CourseInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +89,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AttendersForm.resx">
+      <DependentUpon>AttendersForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CourseInfoForm.resx">
       <DependentUpon>CourseInfoForm.cs</DependentUpon>
     </EmbeddedResource>
