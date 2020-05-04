@@ -38,6 +38,8 @@ namespace Maintenance
             courseCodeTextBox.Text = _course.CourseCode.ToString();
         }
 
+        #region Button Clicks
+
         private void editTrainingInstButton_Click(object sender, EventArgs e)
         {
             using (var dialog = new EditFieldForm(trainingInstitutionTextBox.Text))
@@ -52,14 +54,31 @@ namespace Maintenance
             }
         }
 
+        private void courseEditButton_Click(object sender, EventArgs e)
+        {
+            using (var dialog = new EditFieldForm(courseTextBox.Text))
+            {
+                var result = dialog.ShowDialog();
+                if (result == DialogResult.OK && _course.Course != dialog.Result)
+                {
+                    courseTextBox.Text = dialog.Result;
+                    _course.Course = dialog.Result;
+                    changed = true;
+                }
+            }
+        }
+
+        #endregion
+
         private void CourseInfoForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (changed)
             {
+                // Show messagebox to be sure user wants save changes
                 var result = MessageBox.Show("Do you want to save changes", 
                                              "Save", 
                                              MessageBoxButtons.YesNoCancel);
-
+                
                 if (result == DialogResult.Yes)
                 {
                     using (var context = new AttendanceListContext())
@@ -76,5 +95,7 @@ namespace Maintenance
                 }
             }
         }
+
+        
     }
 }

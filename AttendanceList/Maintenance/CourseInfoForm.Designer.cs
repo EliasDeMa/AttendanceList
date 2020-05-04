@@ -43,6 +43,7 @@
             this.oeNumberTextBox = new System.Windows.Forms.TextBox();
             this.courseCodeTextBox = new System.Windows.Forms.TextBox();
             this.editTrainingInstButton = new System.Windows.Forms.Button();
+            this.courseEditButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // trainingInstitutionLabel
@@ -195,11 +196,22 @@
             this.editTrainingInstButton.UseVisualStyleBackColor = true;
             this.editTrainingInstButton.Click += new System.EventHandler(this.editTrainingInstButton_Click);
             // 
+            // courseEditButton
+            // 
+            this.courseEditButton.Location = new System.Drawing.Point(531, 52);
+            this.courseEditButton.Name = "courseEditButton";
+            this.courseEditButton.Size = new System.Drawing.Size(75, 23);
+            this.courseEditButton.TabIndex = 15;
+            this.courseEditButton.Text = "Edit";
+            this.courseEditButton.UseVisualStyleBackColor = true;
+            this.courseEditButton.Click += new System.EventHandler(this.courseEditButton_Click);
+            // 
             // CourseInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(618, 266);
+            this.Controls.Add(this.courseEditButton);
             this.Controls.Add(this.editTrainingInstButton);
             this.Controls.Add(this.courseCodeTextBox);
             this.Controls.Add(this.oeNumberTextBox);
@@ -241,5 +253,6 @@
         private System.Windows.Forms.TextBox oeNumberTextBox;
         private System.Windows.Forms.TextBox courseCodeTextBox;
         private System.Windows.Forms.Button editTrainingInstButton;
+        private System.Windows.Forms.Button courseEditButton;
     }
 }
