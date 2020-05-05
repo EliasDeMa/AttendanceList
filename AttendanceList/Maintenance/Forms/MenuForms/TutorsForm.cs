@@ -110,5 +110,37 @@ namespace Maintenance.Forms.MenuForms
                 LoadData(_id);
             }
         }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            if (tutorsListBox.SelectedIndex == -1)
+            {
+                tutorErrorProvider.SetError(editButton, "Must select item to edit");
+            }
+            else
+            {
+                using (var dialog = new EditTutorForm((Tutor)tutorsListBox.SelectedItem))
+                {
+                    var result = dialog.ShowDialog();
+
+                    if (result == DialogResult.OK)
+                    {
+                        var tutorToEdit = dialog.Result;
+
+                        using (var context = new AttendanceListContext())
+                        {
+                            var a = context.Tutors.Where(c => c.Id == tutorToEdit.Id).First();
+
+                            a.Name = tutorToEdit.Name;
+                            a.Company = tutorToEdit.Company;
+
+                            context.SaveChanges();
+                        }
+                    }
+                }
+
+                LoadData(_id);
+            }
+        }
     }
 }

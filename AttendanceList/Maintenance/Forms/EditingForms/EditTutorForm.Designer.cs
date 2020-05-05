@@ -1,6 +1,6 @@
 ﻿namespace Maintenance.Forms.EditingForms
 {
-    partial class AddTutorForm
+    partial class EditTutorForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.companyTextBox = new System.Windows.Forms.TextBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.companyLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cancelButton = new System.Windows.Forms.Button();
-            this.addButton = new System.Windows.Forms.Button();
-            this.addTutorErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.addTutorErrorProvider)).BeginInit();
+            this.confirmButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // companyTextBox
@@ -44,14 +41,14 @@
             this.companyTextBox.Location = new System.Drawing.Point(132, 52);
             this.companyTextBox.Name = "companyTextBox";
             this.companyTextBox.Size = new System.Drawing.Size(296, 20);
-            this.companyTextBox.TabIndex = 12;
+            this.companyTextBox.TabIndex = 18;
             // 
             // nameTextBox
             // 
             this.nameTextBox.Location = new System.Drawing.Point(132, 14);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(296, 20);
-            this.nameTextBox.TabIndex = 11;
+            this.nameTextBox.TabIndex = 17;
             // 
             // companyLabel
             // 
@@ -60,7 +57,7 @@
             this.companyLabel.Location = new System.Drawing.Point(12, 46);
             this.companyLabel.Name = "companyLabel";
             this.companyLabel.Size = new System.Drawing.Size(103, 25);
-            this.companyLabel.TabIndex = 10;
+            this.companyLabel.TabIndex = 16;
             this.companyLabel.Text = "Company:";
             // 
             // label1
@@ -70,7 +67,7 @@
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 25);
-            this.label1.TabIndex = 9;
+            this.label1.TabIndex = 15;
             this.label1.Text = "Name:";
             // 
             // cancelButton
@@ -78,40 +75,35 @@
             this.cancelButton.Location = new System.Drawing.Point(224, 88);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(200, 41);
-            this.cancelButton.TabIndex = 8;
+            this.cancelButton.TabIndex = 14;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
-            // addButton
+            // confirmButton
             // 
-            this.addButton.Location = new System.Drawing.Point(18, 88);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(200, 41);
-            this.addButton.TabIndex = 7;
-            this.addButton.Text = "Add";
-            this.addButton.UseVisualStyleBackColor = true;
-            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            this.confirmButton.Location = new System.Drawing.Point(18, 88);
+            this.confirmButton.Name = "confirmButton";
+            this.confirmButton.Size = new System.Drawing.Size(200, 41);
+            this.confirmButton.TabIndex = 13;
+            this.confirmButton.Text = "Confirm";
+            this.confirmButton.UseVisualStyleBackColor = true;
+            this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
-            // addTutorErrorProvider
-            // 
-            this.addTutorErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.addTutorErrorProvider.ContainerControl = this;
-            // 
-            // AddTutorForm
+            // EditTutorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 139);
+            this.ClientSize = new System.Drawing.Size(447, 145);
             this.Controls.Add(this.companyTextBox);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.companyLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.addButton);
-            this.Name = "AddTutorForm";
-            this.Text = "AddTutorForm";
-            ((System.ComponentModel.ISupportInitialize)(this.addTutorErrorProvider)).EndInit();
+            this.Controls.Add(this.confirmButton);
+            this.Name = "EditTutorForm";
+            this.Text = "EditTutorForm";
+            this.Load += new System.EventHandler(this.EditTutorForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,7 +116,6 @@
         private System.Windows.Forms.Label companyLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button cancelButton;
-        private System.Windows.Forms.Button addButton;
-        private System.Windows.Forms.ErrorProvider addTutorErrorProvider;
+        private System.Windows.Forms.Button confirmButton;
     }
 }

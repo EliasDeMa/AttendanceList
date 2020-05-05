@@ -14,7 +14,7 @@ namespace Maintenance.Forms.EditingForms
 {
     public partial class AddAttenderForm : Form, IReturn<Attender>
     {
-        private Attender attender = new Attender();
+        private readonly Attender attender = new Attender();
         public AddAttenderForm()
         {
             InitializeComponent();

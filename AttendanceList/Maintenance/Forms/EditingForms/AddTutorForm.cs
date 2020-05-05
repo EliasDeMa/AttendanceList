@@ -14,7 +14,7 @@ namespace Maintenance.Forms.EditingForms
 {
     public partial class AddTutorForm : Form, IReturn<Tutor>
     {
-        private Tutor tutor = new Tutor();
+        private readonly Tutor tutor = new Tutor();
         public AddTutorForm()
         {
             InitializeComponent();
