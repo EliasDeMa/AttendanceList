@@ -1,4 +1,4 @@
-﻿namespace Maintenance
+﻿namespace Maintenance.Forms.MenuForms
 {
     partial class DaysOffForm
     {

@@ -98,6 +98,12 @@
     <Compile Include="Forms\EditingForms\EditFieldForm.Designer.cs">
       <DependentUpon>EditFieldForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MenuForms\TutorsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuForms\TutorsForm.Designer.cs">
+      <DependentUpon>TutorsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\IReturn.cs" />
     <Compile Include="Forms\MenuForms\MainMenu.cs">
       <SubType>Form</SubType>

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DatabaseModel;
+using Maintenance.Forms.MenuForms;
 
 namespace Maintenance
 {
@@ -38,10 +39,9 @@ namespace Maintenance
             }
             else
             {
-                mainErrorProvider.SetError(attendersButton, "");
+                mainErrorProvider.Clear();
                 var currentSelectedCourse = ((CourseInfo)coursesListBox.SelectedItem).Id;
                 var courseInfoForm = new CourseInfoForm(currentSelectedCourse);
-
                 courseInfoForm.Show();
             }
 
@@ -55,14 +55,13 @@ namespace Maintenance
             }
             else
             {
-                mainErrorProvider.SetError(attendersButton, "");
+                mainErrorProvider.Clear();
                 var currentSelectedCourse = ((CourseInfo)coursesListBox.SelectedItem).Id;
+
                 using (var courseInfoForm = new AttendersForm(currentSelectedCourse))
                 {
                     courseInfoForm.ShowDialog();
-
                 }
-
             }
         }
 
@@ -74,14 +73,31 @@ namespace Maintenance
             }
             else
             {
-                mainErrorProvider.SetError(daysOffButton, "");
+                mainErrorProvider.Clear();
                 var currentSelectedCourse = ((CourseInfo)coursesListBox.SelectedItem).Id;
+
                 using (var daysOffForm = new DaysOffForm(currentSelectedCourse))
                 {
                     daysOffForm.ShowDialog();
-
                 }
+            }
+        }
 
+        private void tutorsButton_Click(object sender, EventArgs e)
+        {
+            if (coursesListBox.SelectedIndex == -1)
+            {
+                mainErrorProvider.SetError(tutorsButton, "Must have item selected before clicking button");
+            }
+            else
+            {
+                mainErrorProvider.Clear();
+                var currentSelectedCourse = ((CourseInfo)coursesListBox.SelectedItem).Id;
+
+                using (var tutorsForm = new TutorsForm(currentSelectedCourse))
+                {
+                    tutorsForm.ShowDialog();
+                }
             }
         }
     }

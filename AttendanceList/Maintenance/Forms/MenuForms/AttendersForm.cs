@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Maintenance
+namespace Maintenance.Forms.MenuForms
 {
     public partial class AttendersForm : Form
     {

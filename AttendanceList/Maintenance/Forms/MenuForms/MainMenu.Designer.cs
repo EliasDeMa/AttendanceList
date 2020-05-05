@@ -35,6 +35,7 @@
             this.mainErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.attendersButton = new System.Windows.Forms.Button();
             this.daysOffButton = new System.Windows.Forms.Button();
+            this.tutorsButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.mainErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,11 +94,22 @@
             this.daysOffButton.UseVisualStyleBackColor = true;
             this.daysOffButton.Click += new System.EventHandler(this.daysOffButton_Click);
             // 
+            // tutorsButton
+            // 
+            this.tutorsButton.Location = new System.Drawing.Point(382, 201);
+            this.tutorsButton.Name = "tutorsButton";
+            this.tutorsButton.Size = new System.Drawing.Size(195, 47);
+            this.tutorsButton.TabIndex = 6;
+            this.tutorsButton.Text = "Tutors";
+            this.tutorsButton.UseVisualStyleBackColor = true;
+            this.tutorsButton.Click += new System.EventHandler(this.tutorsButton_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tutorsButton);
             this.Controls.Add(this.daysOffButton);
             this.Controls.Add(this.attendersButton);
             this.Controls.Add(this.courseInfoButton);
@@ -120,6 +132,7 @@
         private System.Windows.Forms.ErrorProvider mainErrorProvider;
         private System.Windows.Forms.Button attendersButton;
         private System.Windows.Forms.Button daysOffButton;
+        private System.Windows.Forms.Button tutorsButton;
     }
 }
 
