@@ -36,6 +36,7 @@
             this.attendersButton = new System.Windows.Forms.Button();
             this.daysOffButton = new System.Windows.Forms.Button();
             this.tutorsButton = new System.Windows.Forms.Button();
+            this.registrationButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.mainErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +47,7 @@
             this.coursesListBox.ItemHeight = 25;
             this.coursesListBox.Location = new System.Drawing.Point(19, 42);
             this.coursesListBox.Name = "coursesListBox";
-            this.coursesListBox.Size = new System.Drawing.Size(344, 229);
+            this.coursesListBox.Size = new System.Drawing.Size(344, 254);
             this.coursesListBox.TabIndex = 1;
             // 
             // courseTitlesLabel
@@ -104,11 +105,22 @@
             this.tutorsButton.UseVisualStyleBackColor = true;
             this.tutorsButton.Click += new System.EventHandler(this.tutorsButton_Click);
             // 
+            // registrationButton
+            // 
+            this.registrationButton.Location = new System.Drawing.Point(382, 254);
+            this.registrationButton.Name = "registrationButton";
+            this.registrationButton.Size = new System.Drawing.Size(195, 47);
+            this.registrationButton.TabIndex = 7;
+            this.registrationButton.Text = "Registrations";
+            this.registrationButton.UseVisualStyleBackColor = true;
+            this.registrationButton.Click += new System.EventHandler(this.registrationButton_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.registrationButton);
             this.Controls.Add(this.tutorsButton);
             this.Controls.Add(this.daysOffButton);
             this.Controls.Add(this.attendersButton);
@@ -133,6 +145,7 @@
         private System.Windows.Forms.Button attendersButton;
         private System.Windows.Forms.Button daysOffButton;
         private System.Windows.Forms.Button tutorsButton;
+        private System.Windows.Forms.Button registrationButton;
     }
 }
 

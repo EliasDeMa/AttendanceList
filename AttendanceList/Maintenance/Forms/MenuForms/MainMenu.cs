@@ -100,5 +100,23 @@ namespace Maintenance
                 }
             }
         }
+
+        private void registrationButton_Click(object sender, EventArgs e)
+        {
+            if (coursesListBox.SelectedIndex == -1)
+            {
+                mainErrorProvider.SetError(tutorsButton, "Must have item selected before clicking button");
+            }
+            else
+            {
+                mainErrorProvider.Clear();
+                var currentSelectedCourse = ((CourseInfo)coursesListBox.SelectedItem).Id;
+
+                using (var registrations = new RegistrationsForm(currentSelectedCourse))
+                {
+                    registrations.ShowDialog();
+                }
+            }
+        }
     }
 }
