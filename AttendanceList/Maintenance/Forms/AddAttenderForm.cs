@@ -43,5 +43,11 @@ namespace Maintenance
                 Close();
             }
         }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            Close();
+        }
     }
 }

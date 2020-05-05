@@ -35,6 +35,7 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.deleteButton = new System.Windows.Forms.Button();
             this.attendersErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.editButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -85,6 +86,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.editButton);
             this.splitContainer1.Panel2.Controls.Add(this.deleteButton);
             this.splitContainer1.Panel2.Controls.Add(this.addAttenderButton);
             this.splitContainer1.Size = new System.Drawing.Size(452, 380);
@@ -105,6 +107,16 @@
             // 
             this.attendersErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.attendersErrorProvider.ContainerControl = this;
+            // 
+            // editButton
+            // 
+            this.editButton.Location = new System.Drawing.Point(22, 194);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(132, 49);
+            this.editButton.TabIndex = 4;
+            this.editButton.Text = "Edit";
+            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // AttendersForm
             // 
@@ -133,5 +145,6 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.ErrorProvider attendersErrorProvider;
+        private System.Windows.Forms.Button editButton;
     }
 }

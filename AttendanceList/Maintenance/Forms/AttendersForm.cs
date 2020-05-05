@@ -118,5 +118,17 @@ namespace Maintenance
                 LoadData(_id);
             }
         }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            if (attendersListBox.SelectedIndex == -1)
+            {
+                attendersErrorProvider.SetError(editButton, "Must select item to edit");
+            }
+            else
+            {
+
+            }
+        }
     }
 }
