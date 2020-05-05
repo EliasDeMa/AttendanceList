@@ -99,6 +99,7 @@
             this.addAttenderButton.TabIndex = 2;
             this.addAttenderButton.Text = "Add";
             this.addAttenderButton.UseVisualStyleBackColor = true;
+            this.addAttenderButton.Click += new System.EventHandler(this.addAttenderButton_Click);
             // 
             // nonCourseDayErrorProvider
             // 

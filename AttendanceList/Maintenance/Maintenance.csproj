@@ -56,70 +56,70 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\DaysOffForm.cs">
+    <Compile Include="Forms\MenuForms\DaysOffForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\DaysOffForm.Designer.cs">
+    <Compile Include="Forms\MenuForms\DaysOffForm.Designer.cs">
       <DependentUpon>DaysOffForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AddAttenderForm.cs">
+    <Compile Include="Forms\EditingForms\AddAttenderForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AddAttenderForm.Designer.cs">
+    <Compile Include="Forms\EditingForms\AddAttenderForm.Designer.cs">
       <DependentUpon>AddAttenderForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AttendersForm.cs">
+    <Compile Include="Forms\MenuForms\AttendersForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AttendersForm.Designer.cs">
+    <Compile Include="Forms\MenuForms\AttendersForm.Designer.cs">
       <DependentUpon>AttendersForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CourseInfoForm.cs">
+    <Compile Include="Forms\MenuForms\CourseInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CourseInfoForm.Designer.cs">
+    <Compile Include="Forms\MenuForms\CourseInfoForm.Designer.cs">
       <DependentUpon>CourseInfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\EditAttenderForm.cs">
+    <Compile Include="Forms\EditingForms\EditAttenderForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\EditAttenderForm.Designer.cs">
+    <Compile Include="Forms\EditingForms\EditAttenderForm.Designer.cs">
       <DependentUpon>EditAttenderForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\EditFieldForm.cs">
+    <Compile Include="Forms\EditingForms\EditFieldForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\EditFieldForm.Designer.cs">
+    <Compile Include="Forms\EditingForms\EditFieldForm.Designer.cs">
       <DependentUpon>EditFieldForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IReturn.cs" />
-    <Compile Include="Forms\MainMenu.cs">
+    <Compile Include="Forms\MenuForms\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MainMenu.Designer.cs">
+    <Compile Include="Forms\MenuForms\MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\AddAttenderForm.resx">
+    <EmbeddedResource Include="Forms\EditingForms\AddAttenderForm.resx">
       <DependentUpon>AddAttenderForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AttendersForm.resx">
+    <EmbeddedResource Include="Forms\MenuForms\AttendersForm.resx">
       <DependentUpon>AttendersForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CourseInfoForm.resx">
+    <EmbeddedResource Include="Forms\MenuForms\CourseInfoForm.resx">
       <DependentUpon>CourseInfoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DaysOffForm.resx">
+    <EmbeddedResource Include="Forms\MenuForms\DaysOffForm.resx">
       <DependentUpon>DaysOffForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\EditAttenderForm.resx">
+    <EmbeddedResource Include="Forms\EditingForms\EditAttenderForm.resx">
       <DependentUpon>EditAttenderForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\EditFieldForm.resx">
+    <EmbeddedResource Include="Forms\EditingForms\EditFieldForm.resx">
       <DependentUpon>EditFieldForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MainMenu.resx">
+    <EmbeddedResource Include="Forms\MenuForms\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

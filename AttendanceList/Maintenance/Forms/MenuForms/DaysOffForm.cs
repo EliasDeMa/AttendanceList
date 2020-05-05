@@ -67,5 +67,13 @@ namespace Maintenance
                 LoadData(_id);
             }
         }
+
+        private void addAttenderButton_Click(object sender, EventArgs e)
+        {
+            using (var context = new AttendanceListContext())
+            {
+
+            }
+        }
     }
 }
