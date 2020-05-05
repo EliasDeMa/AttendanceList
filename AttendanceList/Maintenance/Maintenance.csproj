@@ -110,6 +110,9 @@
     <EmbeddedResource Include="Forms\EditingForms\AddAttenderForm.resx">
       <DependentUpon>AddAttenderForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditingForms\AddNonCourseDayForm.resx">
+      <DependentUpon>AddNonCourseDayForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MenuForms\AttendersForm.resx">
       <DependentUpon>AttendersForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,4 +1,5 @@
 ﻿using DatabaseModel;
+using Maintenance.Forms.EditingForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -68,11 +69,40 @@ namespace Maintenance
             }
         }
 
-        private void addAttenderButton_Click(object sender, EventArgs e)
+        private void addDayOffButton_Click(object sender, EventArgs e)
         {
-            using (var context = new AttendanceListContext())
+            using (var dialog = new AddNonCourseDayForm())
             {
+                var result = dialog.ShowDialog();
 
+                if (result == DialogResult.OK)
+                {
+                    var (range, morning, afternoon) = dialog.Result;
+
+                    var startDate = range.Start;
+                    var endDate = range.End;
+
+                    while (startDate <= endDate)
+                    {
+                        using (var context = new AttendanceListContext())
+                        {
+                            if (!nonCourseDays.Where(x => x.Date == startDate).Any())
+                            {
+                                context.NonCourseDays.Add(new NonCourseDay()
+                                {
+                                    Date = startDate,
+                                    Morning = morning,
+                                    Afternoon = afternoon,
+                                    CourseId = _id,
+                                });
+                                context.SaveChanges();
+                            }       
+                        }
+                        startDate = startDate.AddDays(1);
+                    }
+
+                    LoadData(_id);
+                }
             }
         }
     }

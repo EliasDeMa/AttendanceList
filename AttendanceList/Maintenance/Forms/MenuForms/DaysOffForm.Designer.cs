@@ -33,7 +33,7 @@
             this.daysOffLabel = new System.Windows.Forms.Label();
             this.daysOffListBox = new System.Windows.Forms.ListBox();
             this.deleteButton = new System.Windows.Forms.Button();
-            this.addAttenderButton = new System.Windows.Forms.Button();
+            this.addDayOffButton = new System.Windows.Forms.Button();
             this.nonCourseDayErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -58,7 +58,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.deleteButton);
-            this.splitContainer1.Panel2.Controls.Add(this.addAttenderButton);
+            this.splitContainer1.Panel2.Controls.Add(this.addDayOffButton);
             this.splitContainer1.Size = new System.Drawing.Size(495, 405);
             this.splitContainer1.SplitterDistance = 279;
             this.splitContainer1.TabIndex = 4;
@@ -91,15 +91,15 @@
             this.deleteButton.UseVisualStyleBackColor = true;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
-            // addAttenderButton
+            // addDayOffButton
             // 
-            this.addAttenderButton.Location = new System.Drawing.Point(22, 56);
-            this.addAttenderButton.Name = "addAttenderButton";
-            this.addAttenderButton.Size = new System.Drawing.Size(132, 49);
-            this.addAttenderButton.TabIndex = 2;
-            this.addAttenderButton.Text = "Add";
-            this.addAttenderButton.UseVisualStyleBackColor = true;
-            this.addAttenderButton.Click += new System.EventHandler(this.addAttenderButton_Click);
+            this.addDayOffButton.Location = new System.Drawing.Point(22, 56);
+            this.addDayOffButton.Name = "addDayOffButton";
+            this.addDayOffButton.Size = new System.Drawing.Size(132, 49);
+            this.addDayOffButton.TabIndex = 2;
+            this.addDayOffButton.Text = "Add";
+            this.addDayOffButton.UseVisualStyleBackColor = true;
+            this.addDayOffButton.Click += new System.EventHandler(this.addDayOffButton_Click);
             // 
             // nonCourseDayErrorProvider
             // 
@@ -131,7 +131,7 @@
         private System.Windows.Forms.Label daysOffLabel;
         private System.Windows.Forms.ListBox daysOffListBox;
         private System.Windows.Forms.Button deleteButton;
-        private System.Windows.Forms.Button addAttenderButton;
+        private System.Windows.Forms.Button addDayOffButton;
         private System.Windows.Forms.ErrorProvider nonCourseDayErrorProvider;
     }
 }
