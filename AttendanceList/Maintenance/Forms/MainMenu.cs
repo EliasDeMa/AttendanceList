@@ -65,5 +65,24 @@ namespace Maintenance
 
             }
         }
+
+        private void daysOffButton_Click(object sender, EventArgs e)
+        {
+            if (coursesListBox.SelectedIndex == -1)
+            {
+                mainErrorProvider.SetError(daysOffButton, "Must have item selected before clicking button");
+            }
+            else
+            {
+                mainErrorProvider.SetError(daysOffButton, "");
+                var currentSelectedCourse = ((CourseInfo)coursesListBox.SelectedItem).Id;
+                using (var daysOffForm = new DaysOffForm(currentSelectedCourse))
+                {
+                    daysOffForm.ShowDialog();
+
+                }
+
+            }
+        }
     }
 }
