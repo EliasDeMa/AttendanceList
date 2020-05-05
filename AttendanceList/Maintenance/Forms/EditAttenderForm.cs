@@ -22,13 +22,39 @@ namespace Maintenance.Forms
             currAttender = attender;
         }
 
-        public Attender Result => throw new NotImplementedException();
+        public Attender Result => currAttender;
 
         private void EditAttenderForm_Load(object sender, EventArgs e)
         {
             nameTextBox.Text = currAttender.Name;
             AddressTextBox.Text = currAttender.Address;
             birthdateTextBox.Text = currAttender.Birthdate.GetValueOrDefault().ToShortDateString();
+        }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            if (nameTextBox.Text != currAttender.Name ||
+                AddressTextBox.Text != currAttender.Address ||
+                birthdateTextBox.Text != currAttender.Birthdate.GetValueOrDefault().ToShortDateString())
+            {
+                currAttender.Birthdate = DateTime.Parse(birthdateTextBox.Text);
+                currAttender.Address = AddressTextBox.Text;
+                currAttender.Name = nameTextBox.Text;
+            }
+
+            var r = MessageBox.Show("Are you sure want to save these changes", "Save", MessageBoxButtons.OKCancel);
+
+            if (r == DialogResult.OK)
+            {
+                DialogResult = DialogResult.OK;
+                Close();
+            }
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+            Close();
         }
     }
 }

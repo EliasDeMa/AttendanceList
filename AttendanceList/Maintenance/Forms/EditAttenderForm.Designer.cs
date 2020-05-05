@@ -97,6 +97,7 @@
             this.cancelButton.TabIndex = 9;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // editButton
             // 
@@ -106,6 +107,7 @@
             this.editButton.TabIndex = 8;
             this.editButton.Text = "Confirm";
             this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // EditAttenderForm
             // 
