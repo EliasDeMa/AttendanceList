@@ -1,4 +1,5 @@
 ﻿using DatabaseModel;
+using Maintenance.Forms.EditingForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,6 +38,77 @@ namespace Maintenance.Forms.MenuForms
 
             tutorsListBox.Items.Clear();
             tutorsListBox.Items.AddRange(tutors.ToArray());
+        }
+
+        private void addTutorButton_Click(object sender, EventArgs e)
+        {
+            using (var addTutor = new AddTutorForm())
+            {
+                var result = addTutor.ShowDialog();
+
+                if (result == DialogResult.OK)
+                {
+                    var tutor = addTutor.Result;
+
+                    using (var context = new AttendanceListContext())
+                    {
+                        tutor = context.Tutors.Add(new Tutor()
+                        {
+                            Name = tutor.Name,
+                            Company = tutor.Company,
+                        });
+
+                        context.SaveChanges();
+                    }
+
+                    using (var context = new AttendanceListContext())
+                    {
+                        int attId = context.Tutors.Where(x => x.Id == tutor.Id)
+                            .Select(x => x.Id)
+                            .First();
+
+                        context.CourseTutors.Add(new CourseTutor()
+                        {
+                            TutorId = attId,
+                            CourseId = _id,
+                        });
+
+                        context.SaveChanges();
+                    }
+
+                    LoadData(_id);
+                }
+            }
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            if (tutorsListBox.SelectedIndex == -1)
+            {
+                tutorErrorProvider.SetError(deleteButton, "Must select item to delete");
+            }
+            else
+            {
+                var tutor = (Tutor)tutorsListBox.SelectedItem;
+
+                var result = MessageBox.Show("Are you sure you want to delete this item", "Delete", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+                    using (var context = new AttendanceListContext())
+                    {
+                        var toDeleteCourseConnection = context.CourseTutors.First(x => x.TutorId == tutor.Id);
+                        context.CourseTutors.Remove(toDeleteCourseConnection);
+
+                        var toDelete = context.Tutors.FirstOrDefault(a => a.Id == tutor.Id);
+                        context.Tutors.Remove(toDelete);
+
+                        context.SaveChanges();
+                    }
+                }
+
+                LoadData(_id);
+            }
         }
     }
 }

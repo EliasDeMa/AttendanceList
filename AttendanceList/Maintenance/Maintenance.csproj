@@ -62,6 +62,12 @@
     <Compile Include="Forms\EditingForms\AddNonCourseDayForm.Designer.cs">
       <DependentUpon>AddNonCourseDayForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EditingForms\AddTutorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditingForms\AddTutorForm.Designer.cs">
+      <DependentUpon>AddTutorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MenuForms\DaysOffForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditingForms\AddNonCourseDayForm.resx">
       <DependentUpon>AddNonCourseDayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditingForms\AddTutorForm.resx">
+      <DependentUpon>AddTutorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MenuForms\AttendersForm.resx">
       <DependentUpon>AttendersForm.cs</DependentUpon>

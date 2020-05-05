@@ -28,16 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label1 = new System.Windows.Forms.Label();
             this.tutorsListBox = new System.Windows.Forms.ListBox();
             this.editButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.addTutorButton = new System.Windows.Forms.Button();
+            this.tutorErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tutorErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -97,6 +100,7 @@
             this.deleteButton.TabIndex = 3;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // addTutorButton
             // 
@@ -106,6 +110,12 @@
             this.addTutorButton.TabIndex = 2;
             this.addTutorButton.Text = "Add";
             this.addTutorButton.UseVisualStyleBackColor = true;
+            this.addTutorButton.Click += new System.EventHandler(this.addTutorButton_Click);
+            // 
+            // tutorErrorProvider
+            // 
+            this.tutorErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.tutorErrorProvider.ContainerControl = this;
             // 
             // TutorsForm
             // 
@@ -121,6 +131,7 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tutorErrorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -133,5 +144,6 @@
         private System.Windows.Forms.Button editButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button addTutorButton;
+        private System.Windows.Forms.ErrorProvider tutorErrorProvider;
     }
 }
