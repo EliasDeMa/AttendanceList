@@ -14,7 +14,7 @@ namespace Maintenance
 {
     public partial class EditAttenderForm : Form, IReturn<Attender>
     {
-        private Attender currAttender;
+        private readonly Attender currAttender;
 
         public EditAttenderForm(Attender attender)
         {
