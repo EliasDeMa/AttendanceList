@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\DaysOffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DaysOffForm.Designer.cs">
+      <DependentUpon>DaysOffForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddAttenderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CourseInfoForm.resx">
       <DependentUpon>CourseInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DaysOffForm.resx">
+      <DependentUpon>DaysOffForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditAttenderForm.resx">
       <DependentUpon>EditAttenderForm.cs</DependentUpon>
