@@ -57,9 +57,12 @@ namespace Maintenance
             {
                 mainErrorProvider.SetError(attendersButton, "");
                 var currentSelectedCourse = ((CourseInfo)coursesListBox.SelectedItem).Id;
-                var courseInfoForm = new AttendersForm(currentSelectedCourse);
+                using (var courseInfoForm = new AttendersForm(currentSelectedCourse))
+                {
+                    courseInfoForm.ShowDialog();
 
-                courseInfoForm.Show();
+                }
+
             }
         }
     }

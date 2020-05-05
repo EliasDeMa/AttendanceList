@@ -20,22 +20,11 @@ namespace Maintenance
         {
             InitializeComponent();
             _id = id;
-            using (var context = new AttendanceListContext())
-            {
-                attenders = context.CourseAttenders.Where(x => x.CourseId == id)
-                                       .Select(x => x.Attender)
-                                       .ToList();
-            }
-
-            attendersListBox.DataSource = attenders;
         }
 
         private void AttendersForm_Load(object sender, EventArgs e)
         {
-            //foreach (var item in attenders)
-            //{
-            //    attendersListBox.Items.Add(item);
-            //}
+            LoadData(_id);
         }
 
         private void addAttenderButton_Click(object sender, EventArgs e)
@@ -62,7 +51,7 @@ namespace Maintenance
                             BadgeNumber = badge
                         });
 
-                        
+
 
                         context.SaveChanges();
                     }
@@ -81,34 +70,53 @@ namespace Maintenance
                         context.SaveChanges();
                     }
 
-                    attendersListBox.DisplayMember = "";
-                    attendersListBox.DisplayMember = "Name";
-                    //BindData();
-                    //UpdateListBox();
+                    LoadData(_id);
                 }
-
             }
         }
 
-        void BindData()
+        void LoadData(int id)
         {
-            attendersListBox.DataSource = null;
-            attendersListBox.DataSource = attenders;
+
+            using (var context = new AttendanceListContext())
+            {
+                attenders = context.CourseAttenders.Where(x => x.CourseId == id)
+                                       .Select(x => x.Attender)
+                                       .ToList();
+            }
+
+            attendersListBox.Items.Clear();
+            attendersListBox.Items.AddRange(attenders.ToArray());
         }
 
-        //private void UpdateListBox()
-        //{
-        //    using (var context = new AttendanceListContext())
-        //    {
-        //        attenders = context.CourseAttenders.Where(x => x.CourseId == _id)
-        //                               .Select(x => x.Attender)
-        //                               .ToList();
-        //    }
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            if (attendersListBox.SelectedIndex == -1)
+            {
+                attendersErrorProvider.SetError(deleteButton, "Must select item to delete");
+            }
+            else
+            {
+                var attender = (Attender)attendersListBox.SelectedItem;
 
-        //    foreach (var item in attenders)
-        //    {
-        //        attendersListBox.Items.Add(item);
-        //    }
-        //}
+                var result = MessageBox.Show("Are you sure you want to delete this item", "Delete", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+                    using (var context = new AttendanceListContext())
+                    {
+                        var toDeleteCourseConnection = context.CourseAttenders.First(x => x.AttenderId == attender.Id);
+                        context.CourseAttenders.Remove(toDeleteCourseConnection);
+
+                        var toDelete = context.Attenders.FirstOrDefault(a => a.Id == attender.Id);
+                        context.Attenders.Remove(toDelete);
+
+                        context.SaveChanges();
+                    }
+                }
+
+                LoadData(_id);
+            }
+        }
     }
 }

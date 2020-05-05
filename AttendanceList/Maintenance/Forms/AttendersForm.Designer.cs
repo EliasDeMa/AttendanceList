@@ -28,14 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.attendersListBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.addAttenderButton = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.attendersErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.attendersErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // attendersListBox
@@ -81,10 +85,26 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.deleteButton);
             this.splitContainer1.Panel2.Controls.Add(this.addAttenderButton);
             this.splitContainer1.Size = new System.Drawing.Size(452, 380);
             this.splitContainer1.SplitterDistance = 255;
             this.splitContainer1.TabIndex = 3;
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.Location = new System.Drawing.Point(22, 125);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(132, 49);
+            this.deleteButton.TabIndex = 3;
+            this.deleteButton.Text = "Delete";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            // 
+            // attendersErrorProvider
+            // 
+            this.attendersErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.attendersErrorProvider.ContainerControl = this;
             // 
             // AttendersForm
             // 
@@ -100,6 +120,7 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.attendersErrorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -110,5 +131,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button addAttenderButton;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.ErrorProvider attendersErrorProvider;
     }
 }
