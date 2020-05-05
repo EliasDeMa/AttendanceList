@@ -42,7 +42,7 @@
             // 
             // coursesListBox
             // 
-            this.coursesListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.coursesListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.coursesListBox.FormattingEnabled = true;
             this.coursesListBox.ItemHeight = 25;
             this.coursesListBox.Location = new System.Drawing.Point(19, 42);
