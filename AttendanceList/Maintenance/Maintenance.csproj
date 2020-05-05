@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\EditingForms\AddNonCourseDayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditingForms\AddNonCourseDayForm.Designer.cs">
+      <DependentUpon>AddNonCourseDayForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MenuForms\DaysOffForm.cs">
       <SubType>Form</SubType>
     </Compile>
