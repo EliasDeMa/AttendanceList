@@ -131,7 +131,7 @@
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.addButton);
             this.Name = "AddAttenderForm";
-            this.Text = "AddAttenderForm";
+            this.Text = "Add attender";
             ((System.ComponentModel.ISupportInitialize)(this.addAttenderErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

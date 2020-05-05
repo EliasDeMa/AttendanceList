@@ -71,7 +71,7 @@
             this.Controls.Add(this.editTextBox);
             this.Controls.Add(this.okButton);
             this.Name = "EditFieldForm";
-            this.Text = "EditFieldForm";
+            this.Text = "Edit field";
             this.ResumeLayout(false);
             this.PerformLayout();
 

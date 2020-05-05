@@ -296,7 +296,7 @@
             this.Controls.Add(this.trainingInstitutionTextBox);
             this.Controls.Add(this.trainingInstitutionLabel);
             this.Name = "CourseInfoForm";
-            this.Text = "CourseInfoForm";
+            this.Text = "Course info";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CourseInfoForm_FormClosing);
             this.Load += new System.EventHandler(this.CourseInfoForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.editFormErrorProvider)).EndInit();

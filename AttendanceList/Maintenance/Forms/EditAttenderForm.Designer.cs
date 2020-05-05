@@ -123,7 +123,7 @@
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.editButton);
             this.Name = "EditAttenderForm";
-            this.Text = "EditAttenderForm";
+            this.Text = "Edit attender";
             this.Load += new System.EventHandler(this.EditAttenderForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

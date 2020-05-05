@@ -33,9 +33,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.addAttenderButton = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.editButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.attendersErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.editButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -93,6 +93,16 @@
             this.splitContainer1.SplitterDistance = 255;
             this.splitContainer1.TabIndex = 3;
             // 
+            // editButton
+            // 
+            this.editButton.Location = new System.Drawing.Point(22, 194);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(132, 49);
+            this.editButton.TabIndex = 4;
+            this.editButton.Text = "Edit";
+            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
+            // 
             // deleteButton
             // 
             this.deleteButton.Location = new System.Drawing.Point(22, 125);
@@ -108,16 +118,6 @@
             this.attendersErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.attendersErrorProvider.ContainerControl = this;
             // 
-            // editButton
-            // 
-            this.editButton.Location = new System.Drawing.Point(22, 194);
-            this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(132, 49);
-            this.editButton.TabIndex = 4;
-            this.editButton.Text = "Edit";
-            this.editButton.UseVisualStyleBackColor = true;
-            this.editButton.Click += new System.EventHandler(this.editButton_Click);
-            // 
             // AttendersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -125,7 +125,7 @@
             this.ClientSize = new System.Drawing.Size(472, 388);
             this.Controls.Add(this.splitContainer1);
             this.Name = "AttendersForm";
-            this.Text = "AttendersForm";
+            this.Text = "Attenders";
             this.Load += new System.EventHandler(this.AttendersForm_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
