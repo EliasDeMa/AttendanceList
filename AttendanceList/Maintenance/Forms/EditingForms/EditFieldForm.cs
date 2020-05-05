@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Maintenance
+namespace Maintenance.Forms.EditingForms
 {
     public partial class EditFieldForm : Form, IReturn<string>
     {
