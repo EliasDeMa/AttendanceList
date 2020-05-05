@@ -1,4 +1,4 @@
-﻿namespace Maintenance.Forms
+﻿namespace Maintenance
 {
     partial class EditAttenderForm
     {

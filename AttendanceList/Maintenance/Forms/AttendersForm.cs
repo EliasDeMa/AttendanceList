@@ -127,7 +127,28 @@ namespace Maintenance
             }
             else
             {
+                using (var dialog = new EditAttenderForm((Attender)attendersListBox.SelectedItem))
+                {
+                    var result = dialog.ShowDialog();
 
+                    if (result == DialogResult.OK)
+                    {
+                        var attenderToEdit = dialog.Result;
+
+                        using (var context = new AttendanceListContext())
+                        {
+                            var a = context.Attenders.Where(c => c.Id == attenderToEdit.Id).First();
+
+                            a.Name = attenderToEdit.Name;
+                            a.Address = attenderToEdit.Address;
+                            a.Birthdate = attenderToEdit.Birthdate;
+
+                            context.SaveChanges();
+                        }
+                    }
+                }
+
+                LoadData(_id);
             }
         }
     }
