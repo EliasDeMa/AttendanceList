@@ -92,7 +92,7 @@
             this.Controls.Add(this.courseTitlesLabel);
             this.Controls.Add(this.coursesListBox);
             this.Name = "MainMenu";
-            this.Text = "Form1";
+            this.Text = "Maintenance";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mainErrorProvider)).EndInit();
             this.ResumeLayout(false);
