@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace BadgingSystem
 {
-    public partial class Form1 : Form
+    public partial class BadgingForm : Form
     {
         private readonly List<CourseInfo> courses;
         private CourseInfo selectedCourse;
         private List<Attender> attenders;
-        public Form1()
+        public BadgingForm()
         {
             InitializeComponent();
             using (var context = new AttendanceListContext())

@@ -1,6 +1,6 @@
 ﻿namespace BadgingSystem
 {
-    partial class Form1
+    partial class BadgingForm
     {
         /// <summary>
         /// Required designer variable.
