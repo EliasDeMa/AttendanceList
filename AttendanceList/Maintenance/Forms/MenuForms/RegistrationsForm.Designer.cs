@@ -59,6 +59,7 @@
             this.Controls.Add(this.registrationsListBox);
             this.Name = "RegistrationsForm";
             this.Text = "RegistrationsForm";
+            this.Load += new System.EventHandler(this.RegistrationsForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

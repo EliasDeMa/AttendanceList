@@ -21,5 +21,23 @@ namespace Maintenance.Forms.MenuForms
             InitializeComponent();
             _id = id;
         }
+
+        private void RegistrationsForm_Load(object sender, EventArgs e)
+        {
+            LoadData(_id);
+        }
+
+        private void LoadData(int id)
+        {
+            using (var context = new AttendanceListContext())
+            {
+                registrations = context.RegistrationTimes.Where(x => x.CourseId == id)
+                                       .Select(x => x)
+                                       .ToList();
+            }
+
+            registrationsListBox.Items.Clear();
+            registrationsListBox.Items.AddRange(registrations.ToArray());
+        }
     }
 }
