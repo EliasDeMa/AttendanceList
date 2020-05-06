@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maintenance", "Maintenance\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseModel", "DatabaseModel\DatabaseModel.csproj", "{2B3CC28F-EAB0-41C6-A50A-DD4E8FC46C9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadgingSystem", "BadgingSystem\BadgingSystem.csproj", "{3390A318-434F-400B-841E-C010D59141EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2B3CC28F-EAB0-41C6-A50A-DD4E8FC46C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B3CC28F-EAB0-41C6-A50A-DD4E8FC46C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B3CC28F-EAB0-41C6-A50A-DD4E8FC46C9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3390A318-434F-400B-841E-C010D59141EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3390A318-434F-400B-841E-C010D59141EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3390A318-434F-400B-841E-C010D59141EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3390A318-434F-400B-841E-C010D59141EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
