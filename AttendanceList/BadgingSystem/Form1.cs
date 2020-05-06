@@ -46,6 +46,14 @@ namespace BadgingSystem
                     .ToList();
             }
 
+            trainingInstitutionTextBox.Text = selectedCourse.TrainingInstitution;
+            courseTextBox.Text = selectedCourse.Course;
+            contactTextBox.Text = selectedCourse.ContactPerson;
+            addressTextBox.Text = selectedCourse.Address;
+            addressRefTextBox.Text = selectedCourse.ReferenceAddress;
+            oeNumberTextBox.Text = selectedCourse.OeNumber.ToString();
+            ccTextBox.Text = selectedCourse.CourseCode.ToString();
+
 
             foreach (var item in attenders)
             {
@@ -61,9 +69,9 @@ namespace BadgingSystem
                     Anchor = AnchorStyles.None, 
                     Font = new Font(FontFamily.GenericSansSerif, 9),
                     TextAlign = ContentAlignment.TopCenter,
-                    Size = new Size(box.Width, 18),
+                    Size = new Size(box.Width - 2, 18),
                 };
-                label.Location = new Point(0, 20);
+                label.Location = new Point(1, 20);
                 box.Controls.Add(label);
                 box.Controls.Add(button);
 
