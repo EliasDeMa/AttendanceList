@@ -59,7 +59,7 @@ namespace BadgingSystem
             {
                 var box = new GroupBox();
                 var button = new Button();
-                button.Name = $"Id{item.Id}Button";
+                button.Name = $"IdButton{item.Id}";
                 button.Text = "Badge In";
                 button.Location = new Point(box.Width / 2 - button.Width / 2, box.Height - button.Height - 5);
                 button.Anchor = AnchorStyles.None;
@@ -84,7 +84,7 @@ namespace BadgingSystem
             var button = (Button)sender;
             if (button.Text == "Badge In")
             {
-                int id = Int32.Parse(button.Name[2].ToString());
+                int id = Int32.Parse(button.Name.Replace("IdButton", ""));
                 Console.WriteLine(id);
                 using (var context = new AttendanceListContext())
                 {
