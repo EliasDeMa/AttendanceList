@@ -14,6 +14,7 @@ namespace BadgingSystem
     public partial class Form1 : Form
     {
         private readonly List<CourseInfo> courses;
+        private CourseInfo selectedCourse;
         private List<Attender> attenders;
         public Form1()
         {
@@ -37,14 +38,14 @@ namespace BadgingSystem
 
         private void coursesComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            selectedCourse = (CourseInfo)coursesComboBox.SelectedItem;
             using (var context = new AttendanceListContext())
             {
-                attenders = context.CourseAttenders.Where(c => c.CourseId == ((CourseInfo)coursesComboBox.SelectedItem).Id)
+                attenders = context.CourseAttenders.Where(c => c.CourseId == selectedCourse.Id)
                     .Select(ca => ca.Attender)
                     .ToList();
             }
 
-            var boxSize = (Width / 4, Height / 3);
 
             foreach (var item in attenders)
             {
@@ -52,10 +53,18 @@ namespace BadgingSystem
                 var button = new Button();
                 button.Name = $"Id{item.Id}Button";
                 button.Text = "Badge In";
-                button.Location = new Point(box.Width / 2, box.Height / 2);
+                button.Location = new Point(box.Width / 2 - button.Width / 2, box.Height - button.Height - 5);
                 button.Anchor = AnchorStyles.None;
                 button.Click += BadgeInClick;
-                box.Controls.Add(new Label() { Text = item.Name, Location = new Point(10, 10), AutoSize = true });
+                var label = new Label() {
+                    Text = item.Name,
+                    Anchor = AnchorStyles.None, 
+                    Font = new Font(FontFamily.GenericSansSerif, 9),
+                    TextAlign = ContentAlignment.TopCenter,
+                    Size = new Size(box.Width, 18),
+                };
+                label.Location = new Point(0, 20);
+                box.Controls.Add(label);
                 box.Controls.Add(button);
 
                 attendersLayoutPanel.Controls.Add(box);
@@ -69,9 +78,24 @@ namespace BadgingSystem
             {
                 int id = Int32.Parse(button.Name[2].ToString());
                 Console.WriteLine(id);
+                using (var context = new AttendanceListContext())
+                {
+                    context.RegistrationTimes.Add(new RegistrationTime()
+                    {
+                        AttenderId = id,
+                        CourseId = selectedCourse.Id,
+                        DateTime = DateTime.Now
+                    });
+
+                    context.SaveChanges();
+                }
+
+                button.Text = "Badge Out";
             }
-
-
+            else
+            {
+                button.Text = "Badge In";
+            }
         }
     }
 }
