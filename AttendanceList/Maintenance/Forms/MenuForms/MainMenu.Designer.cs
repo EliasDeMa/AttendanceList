@@ -119,7 +119,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(590, 315);
             this.Controls.Add(this.registrationButton);
             this.Controls.Add(this.tutorsButton);
             this.Controls.Add(this.daysOffButton);
@@ -127,7 +127,9 @@
             this.Controls.Add(this.courseInfoButton);
             this.Controls.Add(this.courseTitlesLabel);
             this.Controls.Add(this.coursesListBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Maintenance";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mainErrorProvider)).EndInit();

@@ -124,7 +124,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(472, 388);
             this.Controls.Add(this.splitContainer1);
+            this.MinimumSize = new System.Drawing.Size(488, 427);
             this.Name = "AttendersForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Attenders";
             this.Load += new System.EventHandler(this.AttendersForm_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);

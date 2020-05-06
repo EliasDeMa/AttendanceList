@@ -57,11 +57,8 @@ namespace Maintenance
             {
                 mainErrorProvider.Clear();
                 var currentSelectedCourse = ((CourseInfo)coursesListBox.SelectedItem).Id;
-
-                using (var courseInfoForm = new AttendersForm(currentSelectedCourse))
-                {
-                    courseInfoForm.ShowDialog();
-                }
+                var courseInfoForm = new AttendersForm(currentSelectedCourse);
+                courseInfoForm.Show();
             }
         }
 
@@ -75,11 +72,8 @@ namespace Maintenance
             {
                 mainErrorProvider.Clear();
                 var currentSelectedCourse = ((CourseInfo)coursesListBox.SelectedItem).Id;
-
-                using (var daysOffForm = new DaysOffForm(currentSelectedCourse))
-                {
-                    daysOffForm.ShowDialog();
-                }
+                var daysOffForm = new DaysOffForm(currentSelectedCourse);
+                daysOffForm.Show();    
             }
         }
 
@@ -93,11 +87,8 @@ namespace Maintenance
             {
                 mainErrorProvider.Clear();
                 var currentSelectedCourse = ((CourseInfo)coursesListBox.SelectedItem).Id;
-
-                using (var tutorsForm = new TutorsForm(currentSelectedCourse))
-                {
-                    tutorsForm.ShowDialog();
-                }
+                var tutorsForm = new TutorsForm(currentSelectedCourse);
+                tutorsForm.Show();
             }
         }
 
@@ -111,11 +102,8 @@ namespace Maintenance
             {
                 mainErrorProvider.Clear();
                 var currentSelectedCourse = ((CourseInfo)coursesListBox.SelectedItem).Id;
-
-                using (var registrations = new RegistrationsForm(currentSelectedCourse))
-                {
-                    registrations.ShowDialog();
-                }
+                var registrations = new RegistrationsForm(currentSelectedCourse);
+                registrations.Show();  
             }
         }
     }

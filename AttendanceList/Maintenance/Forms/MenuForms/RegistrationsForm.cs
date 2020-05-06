@@ -25,7 +25,7 @@ namespace Maintenance.Forms.MenuForms
         private void RegistrationsForm_Load(object sender, EventArgs e)
         {
             LoadData(_id);
-            dateFilterTimePicker.Value = dateFilterTimePicker.MinDate;
+            dateFilterTimePicker.Checked = false;
             LoadListBox();
         }
 
@@ -41,7 +41,7 @@ namespace Maintenance.Forms.MenuForms
 
         private void LoadListBox()
         {
-            if (dateFilterTimePicker.Value != dateFilterTimePicker.MinDate)
+            if (dateFilterTimePicker.Checked)
             {
                 var filteredItems = registrations.Where(x => x.DateTime.Value.Date == dateFilterTimePicker.Value.Date);
                 registrationsListBox.Items.Clear();
