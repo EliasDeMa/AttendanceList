@@ -30,14 +30,15 @@
         {
             this.registrationsListBox = new System.Windows.Forms.ListBox();
             this.registrationLabel = new System.Windows.Forms.Label();
+            this.dateFilterTimePicker = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // registrationsListBox
             // 
             this.registrationsListBox.FormattingEnabled = true;
-            this.registrationsListBox.Location = new System.Drawing.Point(12, 43);
+            this.registrationsListBox.Location = new System.Drawing.Point(12, 69);
             this.registrationsListBox.Name = "registrationsListBox";
-            this.registrationsListBox.Size = new System.Drawing.Size(270, 381);
+            this.registrationsListBox.Size = new System.Drawing.Size(245, 355);
             this.registrationsListBox.TabIndex = 0;
             this.registrationsListBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.registrationsListBox_MouseDoubleClick);
             // 
@@ -51,11 +52,22 @@
             this.registrationLabel.TabIndex = 1;
             this.registrationLabel.Text = "Registrations:";
             // 
+            // dateFilterTimePicker
+            // 
+            this.dateFilterTimePicker.Location = new System.Drawing.Point(12, 43);
+            this.dateFilterTimePicker.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
+            this.dateFilterTimePicker.MinDate = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
+            this.dateFilterTimePicker.Name = "dateFilterTimePicker";
+            this.dateFilterTimePicker.Size = new System.Drawing.Size(245, 20);
+            this.dateFilterTimePicker.TabIndex = 2;
+            this.dateFilterTimePicker.ValueChanged += new System.EventHandler(this.dateFilterTimePicker_ValueChanged);
+            // 
             // RegistrationsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(483, 450);
+            this.ClientSize = new System.Drawing.Size(332, 450);
+            this.Controls.Add(this.dateFilterTimePicker);
             this.Controls.Add(this.registrationLabel);
             this.Controls.Add(this.registrationsListBox);
             this.Name = "RegistrationsForm";
@@ -70,5 +82,6 @@
 
         private System.Windows.Forms.ListBox registrationsListBox;
         private System.Windows.Forms.Label registrationLabel;
+        private System.Windows.Forms.DateTimePicker dateFilterTimePicker;
     }
 }

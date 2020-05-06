@@ -25,6 +25,8 @@ namespace Maintenance.Forms.MenuForms
         private void RegistrationsForm_Load(object sender, EventArgs e)
         {
             LoadData(_id);
+            dateFilterTimePicker.Value = dateFilterTimePicker.MinDate;
+            LoadListBox();
         }
 
         private void LoadData(int id)
@@ -34,10 +36,22 @@ namespace Maintenance.Forms.MenuForms
                 registrations = context.RegistrationTimes.Where(x => x.CourseId == id)
                                        .Select(x => x)
                                        .ToList();
-            }
+            }      
+        }
 
-            registrationsListBox.Items.Clear();
-            registrationsListBox.Items.AddRange(registrations.ToArray());
+        private void LoadListBox()
+        {
+            if (dateFilterTimePicker.Value != dateFilterTimePicker.MinDate)
+            {
+                var filteredItems = registrations.Where(x => x.DateTime.Value.Date == dateFilterTimePicker.Value.Date);
+                registrationsListBox.Items.Clear();
+                registrationsListBox.Items.AddRange(filteredItems.ToArray());
+            }
+            else
+            {
+                registrationsListBox.Items.Clear();
+                registrationsListBox.Items.AddRange(registrations.ToArray());
+            }
         }
 
         private void registrationsListBox_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -48,6 +62,11 @@ namespace Maintenance.Forms.MenuForms
                 var r = new RegistrationInfoForm(((RegistrationTime)registrationsListBox.SelectedItem).Id);
                 r.Show();
             }
+        }
+
+        private void dateFilterTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            LoadListBox();
         }
     }
 }
