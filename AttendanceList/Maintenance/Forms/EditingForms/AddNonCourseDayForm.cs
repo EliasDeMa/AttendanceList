@@ -18,13 +18,20 @@ namespace Maintenance.Forms.EditingForms
             InitializeComponent();
         }
 
-        public (SelectionRange, bool, bool) Result 
+        public (SelectionRange, bool, bool) Result
             => (dayOffMonthCalendar.SelectionRange, morningCheckBox.Checked, afternoonCheckBox.Checked);
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.OK;
-            Close();
+            if (morningCheckBox.Checked || afternoonCheckBox.Checked)
+            {
+                DialogResult = DialogResult.OK;
+                Close();
+            }
+            else
+            {
+                dayOffErrorProvider.SetError(button1, "At least one of the cheboxes must checked");
+            }
         }
     }
 }

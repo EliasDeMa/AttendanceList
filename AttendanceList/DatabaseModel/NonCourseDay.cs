@@ -23,7 +23,7 @@ namespace DatabaseModel
 
         public override string ToString()
         {
-            return Date.GetValueOrDefault().ToShortDateString();
+            return $"{Date.GetValueOrDefault().ToShortDateString()}{(Morning.Value? "" : " Afternoon")}{(Afternoon.Value ? "" : " Morning")}";
         }
     }
 }
