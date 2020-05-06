@@ -21,5 +21,10 @@ namespace DatabaseModel
         public virtual Attender Attender { get; set; }
 
         public virtual CourseInfo CourseInfo { get; set; }
+
+        public override string ToString()
+        {
+            return $"{DateTime.Value}";
+        }
     }
 }

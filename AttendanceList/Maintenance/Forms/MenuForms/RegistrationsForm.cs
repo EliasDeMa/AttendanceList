@@ -39,5 +39,14 @@ namespace Maintenance.Forms.MenuForms
             registrationsListBox.Items.Clear();
             registrationsListBox.Items.AddRange(registrations.ToArray());
         }
+
+        private void registrationsListBox_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            int index = this.registrationsListBox.IndexFromPoint(e.Location);
+            if (index != System.Windows.Forms.ListBox.NoMatches)
+            {
+                var r = new RegistrationInfoForm();
+            }
+        }
     }
 }

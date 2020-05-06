@@ -39,6 +39,7 @@
             this.registrationsListBox.Name = "registrationsListBox";
             this.registrationsListBox.Size = new System.Drawing.Size(270, 381);
             this.registrationsListBox.TabIndex = 0;
+            this.registrationsListBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.registrationsListBox_MouseDoubleClick);
             // 
             // registrationLabel
             // 
