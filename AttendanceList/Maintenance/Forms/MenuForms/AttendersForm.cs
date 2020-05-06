@@ -109,6 +109,10 @@ namespace Maintenance.Forms.MenuForms
                         var toDeleteCourseConnection = context.CourseAttenders.First(x => x.AttenderId == attender.Id);
                         context.CourseAttenders.Remove(toDeleteCourseConnection);
 
+                        var registrationToDelete = context.RegistrationTimes.Where(x => x.AttenderId == attender.Id).ToList();
+                        foreach (var item in registrationToDelete)
+                            context.RegistrationTimes.Remove(item);
+
                         var toDelete = context.Attenders.FirstOrDefault(a => a.Id == attender.Id);
                         context.Attenders.Remove(toDelete);
 
