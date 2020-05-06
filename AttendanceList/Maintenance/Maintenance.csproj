@@ -110,6 +110,12 @@
     <Compile Include="Forms\EditingForms\EditFieldForm.Designer.cs">
       <DependentUpon>EditFieldForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MenuForms\RegistrationInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuForms\RegistrationInfoForm.Designer.cs">
+      <DependentUpon>RegistrationInfoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MenuForms\RegistrationsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MenuForms\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuForms\RegistrationInfoForm.resx">
+      <DependentUpon>RegistrationInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MenuForms\RegistrationsForm.resx">
       <DependentUpon>RegistrationsForm.cs</DependentUpon>

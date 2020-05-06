@@ -45,7 +45,8 @@ namespace Maintenance.Forms.MenuForms
             int index = this.registrationsListBox.IndexFromPoint(e.Location);
             if (index != System.Windows.Forms.ListBox.NoMatches)
             {
-                var r = new RegistrationInfoForm();
+                var r = new RegistrationInfoForm(((RegistrationTime)registrationsListBox.SelectedItem).Id);
+                r.Show();
             }
         }
     }
