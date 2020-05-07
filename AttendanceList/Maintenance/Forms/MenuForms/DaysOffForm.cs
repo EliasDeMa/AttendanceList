@@ -16,6 +16,7 @@ namespace Maintenance.Forms.MenuForms
     {
         private List<NonCourseDay> nonCourseDays;
         private readonly int _id;
+        private CourseInfo info;
         public DaysOffForm(int id)
         {
             InitializeComponent();
@@ -35,6 +36,8 @@ namespace Maintenance.Forms.MenuForms
                 nonCourseDays = context.NonCourseDays.Where(x => x.CourseId == id)
                                        .Select(x => x)
                                        .ToList();
+
+                info = context.CourseInfoes.Where(x => x.Id == _id).First();
             }
 
             daysOffListBox.Items.Clear();
@@ -86,7 +89,9 @@ namespace Maintenance.Forms.MenuForms
                     {
                         using (var context = new AttendanceListContext())
                         {
-                            if (!nonCourseDays.Where(x => x.Date == startDate).Any())
+                            if (!nonCourseDays.Where(x => x.Date == startDate).Any() && 
+                                startDate.Date > info.StartDate && 
+                                startDate.Date < info.EndDate)
                             {
                                 context.NonCourseDays.Add(new NonCourseDay()
                                 {
@@ -96,7 +101,14 @@ namespace Maintenance.Forms.MenuForms
                                     CourseId = _id,
                                 });
                                 context.SaveChanges();
-                            }       
+                            }
+                            else if (startDate.Date > info.StartDate || startDate.Date < info.EndDate)
+                            {
+                                MessageBox.Show("Adding a day off must be during the time of the course",
+                                    "Failed to add date",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
+                            }
                         }
                         startDate = startDate.AddDays(1);
                     }

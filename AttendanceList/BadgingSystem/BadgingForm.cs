@@ -69,14 +69,13 @@ namespace BadgingSystem
             if (dayOff == default)
                 LoadItems(selectedCourse);
             else if (dayOff.Morning.Value && dayOff.Afternoon.Value)
-                MessageBox.Show("This course has no class today", "Message", MessageBoxButtons.OK);
+                MessageBox.Show("This course has no class today", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else if (dayOff.Morning.Value && DateTime.Now < beforeAfternoon)
-                MessageBox.Show("This course has no class in the morning today", "Message", MessageBoxButtons.OK);
+                MessageBox.Show("This course has no class in the morning today", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else if (dayOff.Afternoon.Value && DateTime.Now > afterMorning)
-                MessageBox.Show("This course has no class in the afternoon today", "Message", MessageBoxButtons.OK);
+                MessageBox.Show("This course has no class in the afternoon today", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
-                LoadItems(selectedCourse);
-            
+                LoadItems(selectedCourse);   
         }
 
         private void LoadItems(CourseInfo selectedCourse)
