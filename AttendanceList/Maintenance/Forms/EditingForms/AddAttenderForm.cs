@@ -33,7 +33,10 @@ namespace Maintenance.Forms.EditingForms
             if (birthdateTextBox.Text.Length > 0)
                 attender.Birthdate = DateTime.Parse(birthdateTextBox.Text);
 
-            if (attender == default)
+            if (nameTextBox.Text.Length == 0 &&
+                AddressTextBox.Text.Length == 0 &&
+                birthdateTextBox.Text.Length == 0
+                )
             {
                 addAttenderErrorProvider.SetError(addButton, "At least one field must be filled in");
             }

@@ -52,8 +52,6 @@ namespace Maintenance.Forms.MenuForms
                             BadgeNumber = badge
                         });
 
-
-
                         context.SaveChanges();
                     }
 
