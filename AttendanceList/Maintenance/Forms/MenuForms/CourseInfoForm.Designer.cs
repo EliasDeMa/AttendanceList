@@ -295,6 +295,7 @@
             this.Controls.Add(this.courseLabel);
             this.Controls.Add(this.trainingInstitutionTextBox);
             this.Controls.Add(this.trainingInstitutionLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "CourseInfoForm";
             this.Text = "Course info";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CourseInfoForm_FormClosing);

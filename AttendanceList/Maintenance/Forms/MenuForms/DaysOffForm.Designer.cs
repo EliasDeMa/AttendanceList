@@ -112,6 +112,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(519, 429);
             this.Controls.Add(this.splitContainer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "DaysOffForm";
             this.Text = "DaysOffForm";
             this.Load += new System.EventHandler(this.DaysOffForm_Load);

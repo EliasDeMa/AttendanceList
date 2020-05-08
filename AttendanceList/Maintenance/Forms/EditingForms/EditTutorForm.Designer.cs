@@ -101,6 +101,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.confirmButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "EditTutorForm";
             this.Text = "EditTutorForm";
             this.Load += new System.EventHandler(this.EditTutorForm_Load);

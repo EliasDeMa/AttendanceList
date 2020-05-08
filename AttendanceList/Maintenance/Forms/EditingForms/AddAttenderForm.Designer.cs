@@ -130,6 +130,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.addButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AddAttenderForm";
             this.Text = "Add attender";
             ((System.ComponentModel.ISupportInitialize)(this.addAttenderErrorProvider)).EndInit();

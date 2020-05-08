@@ -109,6 +109,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.addButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "AddTutorForm";
             this.Text = "AddTutorForm";
             ((System.ComponentModel.ISupportInitialize)(this.addTutorErrorProvider)).EndInit();

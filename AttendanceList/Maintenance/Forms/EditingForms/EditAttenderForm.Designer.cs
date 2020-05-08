@@ -122,6 +122,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.editButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "EditAttenderForm";
             this.Text = "Edit attender";
             this.Load += new System.EventHandler(this.EditAttenderForm_Load);

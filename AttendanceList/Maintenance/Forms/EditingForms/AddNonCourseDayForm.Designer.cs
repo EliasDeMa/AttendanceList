@@ -89,6 +89,7 @@
             this.Controls.Add(this.afternoonCheckBox);
             this.Controls.Add(this.morningCheckBox);
             this.Controls.Add(this.dayOffMonthCalendar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AddNonCourseDayForm";
             this.Text = "Add day off";
             ((System.ComponentModel.ISupportInitialize)(this.dayOffErrorProvider)).EndInit();

@@ -83,7 +83,7 @@
             this.Controls.Add(this.dateFilterTimePicker);
             this.Controls.Add(this.registrationLabel);
             this.Controls.Add(this.registrationsListBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "RegistrationsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistrationsForm";

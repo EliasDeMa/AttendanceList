@@ -70,6 +70,7 @@
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.editTextBox);
             this.Controls.Add(this.okButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "EditFieldForm";
             this.Text = "Edit field";
             this.ResumeLayout(false);
