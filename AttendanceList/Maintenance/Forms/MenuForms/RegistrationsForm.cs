@@ -52,7 +52,7 @@ namespace Maintenance.Forms.MenuForms
                 filteredItems = registrations.Where(x => x.DateTime.Value.Date == dateFilterTimePicker.Value.Date);
 
             if (attenderIdComboBox.SelectedItem.ToString() != "All")
-                filteredItems = registrations.Where(x => x.AttenderId.ToString() == attenderIdComboBox.SelectedItem.ToString());
+                filteredItems = filteredItems.Where(x => x.AttenderId.ToString() == attenderIdComboBox.SelectedItem.ToString());
 
             registrationsListBox.Items.Clear();
             registrationsListBox.Items.AddRange(filteredItems.ToArray());
