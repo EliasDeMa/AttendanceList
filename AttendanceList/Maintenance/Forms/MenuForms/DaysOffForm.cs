@@ -85,35 +85,34 @@ namespace Maintenance.Forms.MenuForms
                     var startDate = range.Start;
                     var endDate = range.End;
 
-                    while (startDate <= endDate)
+                    if (startDate < info.StartDate || endDate > info.EndDate)
                     {
-                        using (var context = new AttendanceListContext())
-                        {
-                            if (!nonCourseDays.Where(x => x.Date == startDate).Any() && 
-                                startDate.Date > info.StartDate && 
-                                startDate.Date < info.EndDate)
-                            {
-                                context.NonCourseDays.Add(new NonCourseDay()
-                                {
-                                    Date = startDate,
-                                    Morning = morning,
-                                    Afternoon = afternoon,
-                                    CourseId = _id,
-                                });
-                                context.SaveChanges();
-                            }
-                            else if (startDate.Date > info.StartDate || startDate.Date < info.EndDate)
-                            {
-                                MessageBox.Show("Adding a day off must be during the time of the course",
-                                    "Failed to add date",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Warning);
-                            }
-                        }
-                        startDate = startDate.AddDays(1);
+                        nonCourseDayErrorProvider.SetError(addDayOffButton, "One of the added days is not during the course, please only add valid days");
                     }
+                    else
+                    {
+                        nonCourseDayErrorProvider.Clear();
+                        while (startDate <= endDate)
+                        {
+                            using (var context = new AttendanceListContext())
+                            {
+                                if (!nonCourseDays.Where(x => x.Date == startDate).Any())
+                                {
+                                    context.NonCourseDays.Add(new NonCourseDay()
+                                    {
+                                        Date = startDate,
+                                        Morning = morning,
+                                        Afternoon = afternoon,
+                                        CourseId = _id,
+                                    });
+                                    context.SaveChanges();
+                                }
+                            }
+                            startDate = startDate.AddDays(1);
+                        }
 
-                    LoadData(_id);
+                        LoadData(_id);
+                    } 
                 }
             }
         }
