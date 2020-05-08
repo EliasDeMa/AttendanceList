@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationsForm));
             this.registrationsListBox = new System.Windows.Forms.ListBox();
             this.registrationLabel = new System.Windows.Forms.Label();
             this.dateFilterTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -109,6 +110,7 @@
             this.Controls.Add(this.registrationLabel);
             this.Controls.Add(this.registrationsListBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistrationsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistrationsForm";

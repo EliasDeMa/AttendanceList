@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CourseInfoForm));
             this.trainingInstitutionLabel = new System.Windows.Forms.Label();
             this.trainingInstitutionTextBox = new System.Windows.Forms.TextBox();
             this.courseLabel = new System.Windows.Forms.Label();
@@ -296,6 +297,7 @@
             this.Controls.Add(this.trainingInstitutionTextBox);
             this.Controls.Add(this.trainingInstitutionLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CourseInfoForm";
             this.Text = "Course info";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CourseInfoForm_FormClosing);

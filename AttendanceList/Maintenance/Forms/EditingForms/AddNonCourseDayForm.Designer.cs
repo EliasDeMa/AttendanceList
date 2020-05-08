@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNonCourseDayForm));
             this.dayOffMonthCalendar = new System.Windows.Forms.MonthCalendar();
             this.morningCheckBox = new System.Windows.Forms.CheckBox();
             this.afternoonCheckBox = new System.Windows.Forms.CheckBox();
@@ -91,6 +92,7 @@
             this.Controls.Add(this.morningCheckBox);
             this.Controls.Add(this.dayOffMonthCalendar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddNonCourseDayForm";
             this.Text = "Add day off";
             ((System.ComponentModel.ISupportInitialize)(this.dayOffErrorProvider)).EndInit();

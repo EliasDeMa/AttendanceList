@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AttendersForm));
             this.attendersListBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.addAttenderButton = new System.Windows.Forms.Button();
@@ -125,6 +126,7 @@
             this.ClientSize = new System.Drawing.Size(472, 388);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(488, 427);
             this.Name = "AttendersForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

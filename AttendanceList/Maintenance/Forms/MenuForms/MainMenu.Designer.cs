@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.coursesListBox = new System.Windows.Forms.ListBox();
             this.courseTitlesLabel = new System.Windows.Forms.Label();
             this.courseInfoButton = new System.Windows.Forms.Button();
@@ -128,6 +129,7 @@
             this.Controls.Add(this.courseTitlesLabel);
             this.Controls.Add(this.coursesListBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Maintenance";

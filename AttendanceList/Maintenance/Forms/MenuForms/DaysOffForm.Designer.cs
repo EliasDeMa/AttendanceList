@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DaysOffForm));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.daysOffLabel = new System.Windows.Forms.Label();
             this.daysOffListBox = new System.Windows.Forms.ListBox();
@@ -113,6 +114,7 @@
             this.ClientSize = new System.Drawing.Size(519, 429);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DaysOffForm";
             this.Text = "DaysOffForm";
             this.Load += new System.EventHandler(this.DaysOffForm_Load);
