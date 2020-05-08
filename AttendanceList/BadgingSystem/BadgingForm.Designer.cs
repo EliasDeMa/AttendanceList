@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BadgingForm));
             this.timeTextBox = new System.Windows.Forms.TextBox();
             this.timeShowTimer = new System.Windows.Forms.Timer(this.components);
             this.coursesComboBox = new System.Windows.Forms.ComboBox();
@@ -301,6 +302,7 @@
             this.ClientSize = new System.Drawing.Size(1045, 599);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BadgingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Badging System";
