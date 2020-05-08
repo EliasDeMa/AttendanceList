@@ -14,6 +14,7 @@ namespace Maintenance.Forms.MenuForms
     public partial class RegistrationsForm : Form
     {
         private List<RegistrationTime> registrations;
+        private List<string> AttenderIds;
         private readonly int _id;
 
         public RegistrationsForm(int id)
@@ -36,22 +37,25 @@ namespace Maintenance.Forms.MenuForms
                 registrations = context.RegistrationTimes.Where(x => x.CourseId == id)
                                        .Select(x => x)
                                        .ToList();
-            }      
+            }
+
+            AttenderIds = registrations.Select(x => x.AttenderId.ToString()).Distinct().ToList();
+            attenderIdComboBox.Items.AddRange(AttenderIds.ToArray());
+            attenderIdComboBox.SelectedIndex = 0;
         }
 
         private void LoadListBox()
         {
+            IEnumerable<RegistrationTime> filteredItems = registrations;
+
             if (dateFilterTimePicker.Checked)
-            {
-                var filteredItems = registrations.Where(x => x.DateTime.Value.Date == dateFilterTimePicker.Value.Date);
-                registrationsListBox.Items.Clear();
-                registrationsListBox.Items.AddRange(filteredItems.ToArray());
-            }
-            else
-            {
-                registrationsListBox.Items.Clear();
-                registrationsListBox.Items.AddRange(registrations.ToArray());
-            }
+                filteredItems = registrations.Where(x => x.DateTime.Value.Date == dateFilterTimePicker.Value.Date);
+
+            if (attenderIdComboBox.SelectedItem.ToString() != "All")
+                filteredItems = registrations.Where(x => x.AttenderId.ToString() == attenderIdComboBox.SelectedItem.ToString());
+
+            registrationsListBox.Items.Clear();
+            registrationsListBox.Items.AddRange(filteredItems.ToArray());
         }
 
         private void registrationsListBox_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -65,6 +69,11 @@ namespace Maintenance.Forms.MenuForms
         }
 
         private void dateFilterTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            LoadListBox();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadListBox();
         }
