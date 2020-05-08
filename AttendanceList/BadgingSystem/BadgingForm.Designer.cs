@@ -33,23 +33,23 @@
             this.timeShowTimer = new System.Windows.Forms.Timer(this.components);
             this.coursesComboBox = new System.Windows.Forms.ComboBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.attendersLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.addressLabel = new System.Windows.Forms.Label();
-            this.contactLabel = new System.Windows.Forms.Label();
-            this.courseLabel = new System.Windows.Forms.Label();
-            this.trainingInstitutionLabel = new System.Windows.Forms.Label();
-            this.courseCodeLabel = new System.Windows.Forms.Label();
-            this.oeNumberLabel = new System.Windows.Forms.Label();
-            this.refAddressLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ccTextBox = new System.Windows.Forms.TextBox();
+            this.oeNumberTextBox = new System.Windows.Forms.TextBox();
+            this.addressRefTextBox = new System.Windows.Forms.TextBox();
             this.addressTextBox = new System.Windows.Forms.TextBox();
             this.contactTextBox = new System.Windows.Forms.TextBox();
             this.courseTextBox = new System.Windows.Forms.TextBox();
             this.trainingInstitutionTextBox = new System.Windows.Forms.TextBox();
-            this.ccTextBox = new System.Windows.Forms.TextBox();
-            this.oeNumberTextBox = new System.Windows.Forms.TextBox();
-            this.addressRefTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.courseCodeLabel = new System.Windows.Forms.Label();
+            this.oeNumberLabel = new System.Windows.Forms.Label();
+            this.refAddressLabel = new System.Windows.Forms.Label();
+            this.addressLabel = new System.Windows.Forms.Label();
+            this.contactLabel = new System.Windows.Forms.Label();
+            this.courseLabel = new System.Windows.Forms.Label();
+            this.trainingInstitutionLabel = new System.Windows.Forms.Label();
+            this.attendersLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -121,85 +121,58 @@
             this.splitContainer1.SplitterDistance = 38;
             this.splitContainer1.TabIndex = 2;
             // 
-            // attendersLayoutPanel
+            // label2
             // 
-            this.attendersLayoutPanel.Location = new System.Drawing.Point(3, 159);
-            this.attendersLayoutPanel.Name = "attendersLayoutPanel";
-            this.attendersLayoutPanel.Size = new System.Drawing.Size(1056, 371);
-            this.attendersLayoutPanel.TabIndex = 0;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(5, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 18);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Select course:";
             // 
-            // addressLabel
+            // label1
             // 
-            this.addressLabel.AutoSize = true;
-            this.addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addressLabel.Location = new System.Drawing.Point(3, 117);
-            this.addressLabel.Name = "addressLabel";
-            this.addressLabel.Size = new System.Drawing.Size(99, 25);
-            this.addressLabel.TabIndex = 8;
-            this.addressLabel.Text = "Address:";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(751, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 18);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Time:";
             // 
-            // contactLabel
+            // ccTextBox
             // 
-            this.contactLabel.AutoSize = true;
-            this.contactLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactLabel.Location = new System.Drawing.Point(3, 79);
-            this.contactLabel.Name = "contactLabel";
-            this.contactLabel.Size = new System.Drawing.Size(94, 25);
-            this.contactLabel.TabIndex = 7;
-            this.contactLabel.Text = "Contact:";
+            this.ccTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ccTextBox.Enabled = false;
+            this.ccTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ccTextBox.Location = new System.Drawing.Point(728, 79);
+            this.ccTextBox.Name = "ccTextBox";
+            this.ccTextBox.Size = new System.Drawing.Size(295, 23);
+            this.ccTextBox.TabIndex = 18;
+            this.ccTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // courseLabel
+            // oeNumberTextBox
             // 
-            this.courseLabel.AutoSize = true;
-            this.courseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.courseLabel.Location = new System.Drawing.Point(3, 45);
-            this.courseLabel.Name = "courseLabel";
-            this.courseLabel.Size = new System.Drawing.Size(89, 25);
-            this.courseLabel.TabIndex = 6;
-            this.courseLabel.Text = "Course:";
+            this.oeNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.oeNumberTextBox.Enabled = false;
+            this.oeNumberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oeNumberTextBox.Location = new System.Drawing.Point(728, 45);
+            this.oeNumberTextBox.Name = "oeNumberTextBox";
+            this.oeNumberTextBox.Size = new System.Drawing.Size(295, 23);
+            this.oeNumberTextBox.TabIndex = 17;
+            this.oeNumberTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // trainingInstitutionLabel
+            // addressRefTextBox
             // 
-            this.trainingInstitutionLabel.AutoSize = true;
-            this.trainingInstitutionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.trainingInstitutionLabel.Location = new System.Drawing.Point(3, 11);
-            this.trainingInstitutionLabel.Name = "trainingInstitutionLabel";
-            this.trainingInstitutionLabel.Size = new System.Drawing.Size(196, 25);
-            this.trainingInstitutionLabel.TabIndex = 5;
-            this.trainingInstitutionLabel.Text = "Training institution:";
-            // 
-            // courseCodeLabel
-            // 
-            this.courseCodeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.courseCodeLabel.AutoSize = true;
-            this.courseCodeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.courseCodeLabel.Location = new System.Drawing.Point(529, 79);
-            this.courseCodeLabel.Name = "courseCodeLabel";
-            this.courseCodeLabel.Size = new System.Drawing.Size(142, 25);
-            this.courseCodeLabel.TabIndex = 11;
-            this.courseCodeLabel.Text = "Course code:";
-            // 
-            // oeNumberLabel
-            // 
-            this.oeNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.oeNumberLabel.AutoSize = true;
-            this.oeNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.oeNumberLabel.Location = new System.Drawing.Point(529, 45);
-            this.oeNumberLabel.Name = "oeNumberLabel";
-            this.oeNumberLabel.Size = new System.Drawing.Size(133, 25);
-            this.oeNumberLabel.TabIndex = 10;
-            this.oeNumberLabel.Text = "OE-Number:";
-            // 
-            // refAddressLabel
-            // 
-            this.refAddressLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.refAddressLabel.AutoSize = true;
-            this.refAddressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refAddressLabel.Location = new System.Drawing.Point(529, 11);
-            this.refAddressLabel.Name = "refAddressLabel";
-            this.refAddressLabel.Size = new System.Drawing.Size(196, 25);
-            this.refAddressLabel.TabIndex = 9;
-            this.refAddressLabel.Text = "Address reference:";
+            this.addressRefTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.addressRefTextBox.Enabled = false;
+            this.addressRefTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressRefTextBox.Location = new System.Drawing.Point(728, 11);
+            this.addressRefTextBox.Name = "addressRefTextBox";
+            this.addressRefTextBox.Size = new System.Drawing.Size(295, 23);
+            this.addressRefTextBox.TabIndex = 16;
+            this.addressRefTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // addressTextBox
             // 
@@ -241,66 +214,95 @@
             this.trainingInstitutionTextBox.TabIndex = 12;
             this.trainingInstitutionTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // ccTextBox
+            // courseCodeLabel
             // 
-            this.ccTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ccTextBox.Enabled = false;
-            this.ccTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ccTextBox.Location = new System.Drawing.Point(728, 79);
-            this.ccTextBox.Name = "ccTextBox";
-            this.ccTextBox.Size = new System.Drawing.Size(295, 23);
-            this.ccTextBox.TabIndex = 18;
-            this.ccTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.courseCodeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.courseCodeLabel.AutoSize = true;
+            this.courseCodeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.courseCodeLabel.Location = new System.Drawing.Point(529, 79);
+            this.courseCodeLabel.Name = "courseCodeLabel";
+            this.courseCodeLabel.Size = new System.Drawing.Size(142, 25);
+            this.courseCodeLabel.TabIndex = 11;
+            this.courseCodeLabel.Text = "Course code:";
             // 
-            // oeNumberTextBox
+            // oeNumberLabel
             // 
-            this.oeNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.oeNumberTextBox.Enabled = false;
-            this.oeNumberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.oeNumberTextBox.Location = new System.Drawing.Point(728, 45);
-            this.oeNumberTextBox.Name = "oeNumberTextBox";
-            this.oeNumberTextBox.Size = new System.Drawing.Size(295, 23);
-            this.oeNumberTextBox.TabIndex = 17;
-            this.oeNumberTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.oeNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.oeNumberLabel.AutoSize = true;
+            this.oeNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oeNumberLabel.Location = new System.Drawing.Point(529, 45);
+            this.oeNumberLabel.Name = "oeNumberLabel";
+            this.oeNumberLabel.Size = new System.Drawing.Size(133, 25);
+            this.oeNumberLabel.TabIndex = 10;
+            this.oeNumberLabel.Text = "OE-Number:";
             // 
-            // addressRefTextBox
+            // refAddressLabel
             // 
-            this.addressRefTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.addressRefTextBox.Enabled = false;
-            this.addressRefTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addressRefTextBox.Location = new System.Drawing.Point(728, 11);
-            this.addressRefTextBox.Name = "addressRefTextBox";
-            this.addressRefTextBox.Size = new System.Drawing.Size(295, 23);
-            this.addressRefTextBox.TabIndex = 16;
-            this.addressRefTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.refAddressLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.refAddressLabel.AutoSize = true;
+            this.refAddressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refAddressLabel.Location = new System.Drawing.Point(529, 11);
+            this.refAddressLabel.Name = "refAddressLabel";
+            this.refAddressLabel.Size = new System.Drawing.Size(196, 25);
+            this.refAddressLabel.TabIndex = 9;
+            this.refAddressLabel.Text = "Address reference:";
             // 
-            // label1
+            // addressLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(751, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 18);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Time:";
+            this.addressLabel.AutoSize = true;
+            this.addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressLabel.Location = new System.Drawing.Point(3, 117);
+            this.addressLabel.Name = "addressLabel";
+            this.addressLabel.Size = new System.Drawing.Size(99, 25);
+            this.addressLabel.TabIndex = 8;
+            this.addressLabel.Text = "Address:";
             // 
-            // label2
+            // contactLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(5, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 18);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Select course:";
+            this.contactLabel.AutoSize = true;
+            this.contactLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactLabel.Location = new System.Drawing.Point(3, 79);
+            this.contactLabel.Name = "contactLabel";
+            this.contactLabel.Size = new System.Drawing.Size(94, 25);
+            this.contactLabel.TabIndex = 7;
+            this.contactLabel.Text = "Contact:";
             // 
-            // Form1
+            // courseLabel
+            // 
+            this.courseLabel.AutoSize = true;
+            this.courseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.courseLabel.Location = new System.Drawing.Point(3, 45);
+            this.courseLabel.Name = "courseLabel";
+            this.courseLabel.Size = new System.Drawing.Size(89, 25);
+            this.courseLabel.TabIndex = 6;
+            this.courseLabel.Text = "Course:";
+            // 
+            // trainingInstitutionLabel
+            // 
+            this.trainingInstitutionLabel.AutoSize = true;
+            this.trainingInstitutionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trainingInstitutionLabel.Location = new System.Drawing.Point(3, 11);
+            this.trainingInstitutionLabel.Name = "trainingInstitutionLabel";
+            this.trainingInstitutionLabel.Size = new System.Drawing.Size(196, 25);
+            this.trainingInstitutionLabel.TabIndex = 5;
+            this.trainingInstitutionLabel.Text = "Training institution:";
+            // 
+            // attendersLayoutPanel
+            // 
+            this.attendersLayoutPanel.Location = new System.Drawing.Point(3, 159);
+            this.attendersLayoutPanel.Name = "attendersLayoutPanel";
+            this.attendersLayoutPanel.Size = new System.Drawing.Size(1056, 371);
+            this.attendersLayoutPanel.TabIndex = 0;
+            // 
+            // BadgingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1045, 599);
             this.Controls.Add(this.splitContainer1);
-            this.Name = "Form1";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "BadgingForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Badging System";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
