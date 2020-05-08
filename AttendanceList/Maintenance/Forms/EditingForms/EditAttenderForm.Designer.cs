@@ -43,21 +43,21 @@
             this.birthdateTextBox.Location = new System.Drawing.Point(139, 100);
             this.birthdateTextBox.Name = "birthdateTextBox";
             this.birthdateTextBox.Size = new System.Drawing.Size(296, 20);
-            this.birthdateTextBox.TabIndex = 15;
+            this.birthdateTextBox.TabIndex = 2;
             // 
             // AddressTextBox
             // 
             this.AddressTextBox.Location = new System.Drawing.Point(139, 61);
             this.AddressTextBox.Name = "AddressTextBox";
             this.AddressTextBox.Size = new System.Drawing.Size(296, 20);
-            this.AddressTextBox.TabIndex = 14;
+            this.AddressTextBox.TabIndex = 1;
             // 
             // nameTextBox
             // 
             this.nameTextBox.Location = new System.Drawing.Point(139, 23);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(296, 20);
-            this.nameTextBox.TabIndex = 13;
+            this.nameTextBox.TabIndex = 0;
             // 
             // label3
             // 
@@ -91,10 +91,11 @@
             // 
             // cancelButton
             // 
+            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.Location = new System.Drawing.Point(235, 141);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(200, 41);
-            this.cancelButton.TabIndex = 9;
+            this.cancelButton.TabIndex = 4;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
@@ -104,15 +105,17 @@
             this.editButton.Location = new System.Drawing.Point(19, 141);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(200, 41);
-            this.editButton.TabIndex = 8;
+            this.editButton.TabIndex = 3;
             this.editButton.Text = "Confirm";
             this.editButton.UseVisualStyleBackColor = true;
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // EditAttenderForm
             // 
+            this.AcceptButton = this.editButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(466, 202);
             this.Controls.Add(this.birthdateTextBox);
             this.Controls.Add(this.AddressTextBox);

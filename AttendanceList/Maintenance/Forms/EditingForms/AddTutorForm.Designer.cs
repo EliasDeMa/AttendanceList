@@ -44,14 +44,14 @@
             this.companyTextBox.Location = new System.Drawing.Point(132, 52);
             this.companyTextBox.Name = "companyTextBox";
             this.companyTextBox.Size = new System.Drawing.Size(296, 20);
-            this.companyTextBox.TabIndex = 12;
+            this.companyTextBox.TabIndex = 1;
             // 
             // nameTextBox
             // 
             this.nameTextBox.Location = new System.Drawing.Point(132, 14);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(296, 20);
-            this.nameTextBox.TabIndex = 11;
+            this.nameTextBox.TabIndex = 0;
             // 
             // companyLabel
             // 
@@ -75,10 +75,11 @@
             // 
             // cancelButton
             // 
+            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.Location = new System.Drawing.Point(224, 88);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(200, 41);
-            this.cancelButton.TabIndex = 8;
+            this.cancelButton.TabIndex = 3;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
@@ -88,7 +89,7 @@
             this.addButton.Location = new System.Drawing.Point(18, 88);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(200, 41);
-            this.addButton.TabIndex = 7;
+            this.addButton.TabIndex = 2;
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
@@ -100,8 +101,10 @@
             // 
             // AddTutorForm
             // 
+            this.AcceptButton = this.addButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(443, 139);
             this.Controls.Add(this.companyTextBox);
             this.Controls.Add(this.nameTextBox);
@@ -109,7 +112,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.addButton);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AddTutorForm";
             this.Text = "AddTutorForm";
             ((System.ComponentModel.ISupportInitialize)(this.addTutorErrorProvider)).EndInit();

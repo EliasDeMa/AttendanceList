@@ -41,14 +41,14 @@
             this.companyTextBox.Location = new System.Drawing.Point(132, 52);
             this.companyTextBox.Name = "companyTextBox";
             this.companyTextBox.Size = new System.Drawing.Size(296, 20);
-            this.companyTextBox.TabIndex = 18;
+            this.companyTextBox.TabIndex = 1;
             // 
             // nameTextBox
             // 
             this.nameTextBox.Location = new System.Drawing.Point(132, 14);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(296, 20);
-            this.nameTextBox.TabIndex = 17;
+            this.nameTextBox.TabIndex = 0;
             // 
             // companyLabel
             // 
@@ -72,10 +72,11 @@
             // 
             // cancelButton
             // 
+            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.Location = new System.Drawing.Point(224, 88);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(200, 41);
-            this.cancelButton.TabIndex = 14;
+            this.cancelButton.TabIndex = 3;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
@@ -85,15 +86,17 @@
             this.confirmButton.Location = new System.Drawing.Point(18, 88);
             this.confirmButton.Name = "confirmButton";
             this.confirmButton.Size = new System.Drawing.Size(200, 41);
-            this.confirmButton.TabIndex = 13;
+            this.confirmButton.TabIndex = 2;
             this.confirmButton.Text = "Confirm";
             this.confirmButton.UseVisualStyleBackColor = true;
             this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
             // EditTutorForm
             // 
+            this.AcceptButton = this.confirmButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(447, 145);
             this.Controls.Add(this.companyTextBox);
             this.Controls.Add(this.nameTextBox);

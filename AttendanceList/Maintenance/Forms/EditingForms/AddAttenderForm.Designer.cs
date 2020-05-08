@@ -46,17 +46,18 @@
             this.addButton.Location = new System.Drawing.Point(12, 132);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(200, 41);
-            this.addButton.TabIndex = 0;
+            this.addButton.TabIndex = 3;
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // cancelButton
             // 
+            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.Location = new System.Drawing.Point(228, 132);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(200, 41);
-            this.cancelButton.TabIndex = 1;
+            this.cancelButton.TabIndex = 4;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
@@ -96,21 +97,21 @@
             this.nameTextBox.Location = new System.Drawing.Point(132, 14);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(296, 20);
-            this.nameTextBox.TabIndex = 5;
+            this.nameTextBox.TabIndex = 0;
             // 
             // AddressTextBox
             // 
             this.AddressTextBox.Location = new System.Drawing.Point(132, 52);
             this.AddressTextBox.Name = "AddressTextBox";
             this.AddressTextBox.Size = new System.Drawing.Size(296, 20);
-            this.AddressTextBox.TabIndex = 6;
+            this.AddressTextBox.TabIndex = 1;
             // 
             // birthdateTextBox
             // 
             this.birthdateTextBox.Location = new System.Drawing.Point(132, 91);
             this.birthdateTextBox.Name = "birthdateTextBox";
             this.birthdateTextBox.Size = new System.Drawing.Size(296, 20);
-            this.birthdateTextBox.TabIndex = 7;
+            this.birthdateTextBox.TabIndex = 2;
             // 
             // addAttenderErrorProvider
             // 
@@ -119,8 +120,10 @@
             // 
             // AddAttenderForm
             // 
+            this.AcceptButton = this.addButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(455, 191);
             this.Controls.Add(this.birthdateTextBox);
             this.Controls.Add(this.AddressTextBox);
